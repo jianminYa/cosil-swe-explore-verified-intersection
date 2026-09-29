@@ -1,0 +1,24 @@
+2026-09-28 18:44:00,908 - INFO - Processing bug django__django-14170
+2026-09-28 18:44:00,908 - INFO - ================ localize django__django-14170 ================
+2026-09-28 18:44:03,925 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nQuery optimization in YearLookup breaks filtering by "__iso_year"\nDescription\n\t \n\t\t(last modified by Florian Demmer)\n\t \nThe optimization to use BETWEEN instead of the EXTRACT operation in \u200bYearLookup is also registered for the \u200b"__iso_year" lookup, which breaks the functionality provided by \u200bExtractIsoYear when used via the lookup.\nThis has unfortunately been broken ever since ExtractIsoYear was introduced in \u200bDjango 2.2 via #28649 and wasn\'t easy to track down since ExtractIsoYear when used by itself eg. in an annotation works perfectly fine. Just when using the lookup in a filter, the optimization is used (even when explicitly using an annotation):\n# annotation works\n>>> qs = DTModel.objects.annotate(extracted=ExtractIsoYear(\'start_date\')).only(\'id\')\n>>> print(qs.query)\nSELECT "db_functions_dtmodel"."id", EXTRACT(\'isoyear\' FROM "db_functions_dtmodel"."start_date") AS "extracted" FROM "db_functions_dtmodel"\n# explicit annotation used in filter does not use "extracted" and adds BETWEEN\n>>> print(qs.filter(extracted=2020).query)\nSELECT "db_functions_dtmodel"."id", EXTRACT(\'isoyear\' FROM "db_functions_dtmodel"."start_date") AS "extracted" FROM "db_functions_dtmodel" WHERE "db_functions_dtmodel"."start_date" BETWEEN 2020-01-01 AND 2020-12-31\n# implicit lookup uses BETWEEN\n>>> print(DTModel.objects.filter(start_date__iso_year=2020).only(\'id\').query)\nSELECT "db_functions_dtmodel"."id" FROM "db_functions_dtmodel" WHERE "db_functions_dtmodel"."start_date" BETWEEN 2020-01-01 AND 2020-12-31\nThis results in the wrong data being returned by filters using iso_year.\nThis PR fixes the behaviour, reverts the invalid changes to the tests and extends one test to catch this problem: \u200bhttps://github.com/django/django/pull/14157\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 18:44:03,926 - INFO - ================================================================================
+2026-09-28 18:44:07,020 - INFO - ```
+django/db/models/lookups.py
+django/db/models/functions/datetime.py
+django/db/backends/base/operations.py
+tests/db_functions/datetime/test_extract_trunc.py
+tests/model_fields/test_datetimefield.py
+```
+2026-09-28 18:44:09,389 - INFO - ```
+django/db/models/lookups.py
+django/db/models/functions/datetime.py
+django/db/backends/base/operations.py
+tests/db_functions/datetime/test_extract_trunc.py
+tests/model_fields/test_datetimefield.py
+```
+2026-09-28 18:44:12,567 - INFO - ```
+django/db/models/lookups.py
+django/db/models/functions/datetime.py
+django/db/backends/base/operations.py
+```

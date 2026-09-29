@@ -1,0 +1,26 @@
+2026-09-28 19:23:11,361 - INFO - Processing bug django__django-14608
+2026-09-28 19:23:11,361 - INFO - ================ localize django__django-14608 ================
+2026-09-28 19:23:14,388 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nAdd `nonform` CSS class for non form errors in FormSets\nDescription\n\t \n\t\t(last modified by Ties Jan Hefting)\n\t \nForms add the nonfield CSS class for non field errors in ErrorList instances. This is documented in a section on \u200brendering form error messages. Similarly, in FormSets I'd expect to see the nonform CSS class added for non form errors. This would allow a custom ErrorList to make a distinction in form field errors, non field errors (forms) and non form errors (FormSets) when rendering error messages. Therefore I'd suggest to add this nonform CSS class and document it for developers to use.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-28 19:23:14,389 - INFO - ================================================================================
+2026-09-28 19:23:18,591 - INFO - ```
+django/forms/formsets.py
+django/forms/utils.py
+django/forms/forms.py
+tests/forms_tests/tests/test_formsets.py
+docs/ref/forms/api.txt
+```
+2026-09-28 19:23:21,425 - INFO - ```
+django/forms/formsets.py
+django/forms/forms.py
+django/forms/utils.py
+tests/forms_tests/tests/test_formsets.py
+docs/ref/forms/api.txt
+```
+2026-09-28 19:23:24,111 - INFO - ``` 
+django/forms/formsets.py
+django/forms/utils.py
+django/forms/forms.py
+django/forms/__init__.py
+django/forms/renderers.py
+```

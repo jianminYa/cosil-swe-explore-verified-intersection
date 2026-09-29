@@ -1,0 +1,253 @@
+2026-09-28 16:20:33,618 - INFO - Processing bug django__django-12406
+2026-09-28 16:20:33,618 - INFO - ================ localize django__django-12406 ================
+2026-09-28 16:20:36,781 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 16:20:39,994 - INFO - [round 0] tokens=1265 tool_calls=3 content=''
+2026-09-28 16:20:39,994 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:20:39,994 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelChoiceField'}
+2026-09-28 16:20:43,307 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:20:43,308 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:43,308 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/fields.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:20:43,308 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:43,308 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelForm"}
+2026-09-28 16:20:43,308 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:47,041 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:20:47,042 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:47,042 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "fields_for_model"}
+2026-09-28 16:20:47,042 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:20:47,043 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/__init__.py", "func_name": "BLANK_CHOICE_DASH"}
+2026-09-28 16:20:47,043 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:20:49,970 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:20:49,971 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:49,971 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:20:49,971 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:49,971 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "Select"}
+2026-09-28 16:20:49,971 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:52,826 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelChoiceField'}: False
+2026-09-28 16:20:52,826 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:20:52,827 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:20:52,827 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/widgets.py', 'class_name': 'RadioSelect'}
+2026-09-28 16:20:56,273 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "Select"}
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "ChoiceWidget"}
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:20:56,274 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:20:59,293 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 16:20:59,294 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:21:01,809 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/widgets.py', 'class_name': 'RadioSelect'}: False
+2026-09-28 16:21:01,810 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:21:01,810 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:21:01,810 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelFormMetaclass'}
+2026-09-28 16:21:04,614 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:04,615 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:04,615 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceIterator"}
+2026-09-28 16:21:04,615 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:04,615 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelForm"}
+2026-09-28 16:21:04,615 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:07,507 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:07,508 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:07,508 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceIterator"}
+2026-09-28 16:21:07,508 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:07,508 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "fields_for_model"}
+2026-09-28 16:21:07,508 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:10,829 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:21:10,830 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:10,830 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:21:10,830 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:10,830 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/fields.py", "class_name": "ChoiceField"}
+2026-09-28 16:21:10,830 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:13,507 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelFormMetaclass'}: False
+2026-09-28 16:21:13,508 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:21:17,004 - INFO - [round 1] tokens=1482 tool_calls=4 content=''
+2026-09-28 16:21:17,004 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:21:17,005 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ForeignKey'}
+2026-09-28 16:21:20,464 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:20,465 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:20,465 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceIterator"}
+2026-09-28 16:21:20,466 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:20,466 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:21:20,466 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:20,466 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:21:20,466 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:23,507 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:23,508 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:23,508 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "fields_for_model"}
+2026-09-28 16:21:23,508 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:23,508 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/__init__.py", "func_name": "BLANK_CHOICE_DASH"}
+2026-09-28 16:21:23,508 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:25,803 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:21:25,804 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:21:28,261 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ForeignKey'}: False
+2026-09-28 16:21:28,262 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:21:28,262 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceIterator"}
+2026-09-28 16:21:28,262 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelChoiceIterator'}
+2026-09-28 16:21:32,068 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:32,069 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:32,069 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:21:32,069 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:32,069 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:21:32,069 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:34,509 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 16:21:34,510 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:21:37,335 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/models.py', 'class_name': 'ModelChoiceIterator'}: False
+2026-09-28 16:21:37,336 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:21:37,336 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/forms/boundfield.py", "class_name": "BoundField"}
+2026-09-28 16:21:37,336 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/boundfield.py', 'class_name': 'BoundField'}
+2026-09-28 16:21:40,958 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:21:40,959 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:44,170 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "fields_for_model"}
+2026-09-28 16:21:44,171 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:44,171 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "modelform_factory"}
+2026-09-28 16:21:44,172 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:44,172 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "model_to_dict"}
+2026-09-28 16:21:44,172 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:47,142 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:21:47,143 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:21:49,564 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/boundfield.py', 'class_name': 'BoundField'}: False
+2026-09-28 16:21:49,564 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:21:49,564 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/forms/fields.py", "class_name": "ChoiceField"}
+2026-09-28 16:21:49,565 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/fields.py', 'class_name': 'ChoiceField'}
+2026-09-28 16:21:52,907 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:21:52,908 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:52,908 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:21:52,908 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:52,908 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:21:52,908 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:55,995 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceIterator"}
+2026-09-28 16:21:55,996 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:55,996 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/forms/models.py", "func_name": "fields_for_model"}
+2026-09-28 16:21:55,996 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:55,996 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/related.py", "func_name": "ForeignKey.formfield"}
+2026-09-28 16:21:55,996 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:21:59,408 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 16:21:59,409 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:59,409 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelForm"}
+2026-09-28 16:21:59,409 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:21:59,409 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "Select"}
+2026-09-28 16:21:59,410 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:02,476 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/fields.py', 'class_name': 'ChoiceField'}: False
+2026-09-28 16:22:02,477 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:22:04,988 - INFO - [round 2] tokens=1604 tool_calls=1 content=''
+2026-09-28 16:22:04,989 - INFO - [round 2] [tool-call] exit args={}
+2026-09-28 16:22:04,989 - INFO -   [prune] start for exit args={}
+2026-09-28 16:22:07,726 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:22:07,727 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:07,727 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:22:07,727 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:07,727 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelFormMetaclass"}
+2026-09-28 16:22:07,728 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:11,620 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelChoiceField"}
+2026-09-28 16:22:11,621 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:11,621 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/widgets.py", "class_name": "RadioSelect"}
+2026-09-28 16:22:11,621 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:11,621 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/models.py", "class_name": "ModelForm"}
+2026-09-28 16:22:11,621 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:22:14,187 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:22:14,187 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:22:17,430 - INFO -   [prune] decision for exit args={}: ```False```
+2026-09-28 16:22:17,431 - INFO - [round 2] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:22:17,431 - INFO - [round 2] model called exit(), ending tool loop
+2026-09-28 16:22:17,431 - INFO - ==== tool-call loop end ====
+2026-09-28 16:22:21,899 - INFO - <locations>
+  <location>
+    <file>django/forms/models.py</file>
+    <type>function</type>
+    <name>fields_for_model</name>
+  </location>
+  <location>
+    <file>django/db/models/fields/__init__.py</file>
+    <type>function</type>
+    <name>Field.formfield</name>
+  </location>
+  <location>
+    <file>django/db/models/fields/related.py</file>
+    <type>function</type>
+    <name>ForeignKey.formfield</name>
+  </location>
+  <location>
+    <file>django/forms/models.py</file>
+    <type>function</type>
+    <name>ModelChoiceField.__init__</name>
+  </location>
+  <location>
+    <file>django/forms/widgets.py</file>
+    <type>function</type>
+    <name>ChoiceWidget.optgroups</name>
+  </location>
+</locations>
+2026-09-28 16:22:21,901 - INFO - parsed locations: {'django/forms/models.py': ['function: fields_for_model\nfunction: ModelChoiceField.__init__'], 'django/db/models/fields/__init__.py': ['function: Field.formfield'], 'django/db/models/fields/related.py': ['function: ForeignKey.formfield'], 'django/forms/widgets.py': ['function: ChoiceWidget.optgroups']}

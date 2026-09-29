@@ -1,0 +1,16 @@
+{
+  "instance_id": "django__django-13406",
+  "repo_root": "repos/django__django-13406",
+  "model": "gpt-5.4",
+  "api_base": "<redacted-openai-compatible-endpoint>",
+  "region_mode": "file",
+  "timeout": 3600,
+  "max_iterations": 10,
+  "phase_processes": {
+    "file": {
+      "returncode": 0
+    },
+    "func": null
+  },
+  "func_error": "RuntimeError('conda run -n cosil failed (rc=1):\\nSTDOUT:\\n\\n\\x1b[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new\\x1b[0m\\nLiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()\\'.\\n\\n\\nSTDERR:\\nTraceback (most recent call last):\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py\", line 871, in completion\\n    raise e\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py\", line 807, in completion\\n    ) = self.make_sync_openai_chat_completion_request(\\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py\", line 385, in sync_wrapper\\n    result: Final = func(*args, **kwargs)\\n                    ^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py\", line 545, in make_sync_openai_chat_completion_request\\n    raise e\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py\", line 520, in make_sync_openai_chat_completion_request\\n    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)\\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_legacy_response.py\", line 369, in wrapped\\n    return cast(LegacyAPIResponse[R], func(*args, **kwargs))\\n                                      ^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_utils/_utils.py\", line 298, in wrapper\\n    return func(*args, **kwargs)\\n           ^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py\", line 1296, in create\\n    return self._post(\\n           ^^^^^^^^^^^\\n  File \"/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_base_client.py\", line 1375, in post\\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\\n                           ^^^')"
+}

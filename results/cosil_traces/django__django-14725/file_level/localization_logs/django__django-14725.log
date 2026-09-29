@@ -1,0 +1,24 @@
+2026-09-28 19:30:43,634 - INFO - Processing bug django__django-14725
+2026-09-28 19:30:43,634 - INFO - ================ localize django__django-14725 ================
+2026-09-28 19:30:46,667 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nProvide a way for model formsets to disallow new object creation\nDescription\n\t\nModel formsets don\'t provide a way to create an "edit only" view of objects. We see users trying to use extra=0 to accomplish this, but that\'s not reliable as extra is merely meant for the extra number of forms to display. You can add more forms with Javascript (or just send additional post data).\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 19:30:46,668 - INFO - ================================================================================
+2026-09-28 19:30:51,012 - INFO - ```
+django/forms/models.py
+django/forms/formsets.py
+django/contrib/admin/options.py
+tests/model_formsets/tests.py
+docs/topics/forms/modelforms.txt
+```
+2026-09-28 19:30:54,016 - INFO - ```
+django/forms/models.py
+django/forms/formsets.py
+django/contrib/admin/options.py
+tests/model_formsets/tests.py
+docs/topics/forms/modelforms.txt
+```
+2026-09-28 19:30:57,272 - INFO - ```
+django/forms/models.py
+django/forms/formsets.py
+django/contrib/admin/options.py
+```

@@ -1,0 +1,246 @@
+2026-09-28 19:45:27,683 - INFO - Processing bug django__django-14855
+2026-09-28 19:45:27,683 - INFO - ================ localize django__django-14855 ================
+2026-09-28 19:45:30,847 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 19:45:34,292 - INFO - [round 0] tokens=1228 tool_calls=3 content=''
+2026-09-28 19:45:34,292 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:45:34,292 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/contrib/admin/helpers.py', 'func_name': 'get_admin_url'}
+2026-09-28 19:45:37,517 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:45:37,518 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:37,519 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:45:37,519 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:39,979 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:45:39,980 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:45:42,547 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/contrib/admin/helpers.py', 'func_name': 'get_admin_url'}: False
+2026-09-28 19:45:42,548 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:45:42,548 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:45:42,549 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'response_add'}
+2026-09-28 19:45:45,378 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:45:45,379 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:45,379 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:45:45,379 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:48,280 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:45:48,281 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:45:48,281 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/options.py", "func_name": "response_add"}
+2026-09-28 19:45:48,282 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:45:50,480 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 19:45:50,481 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:45:52,875 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'response_add'}: False
+2026-09-28 19:45:52,876 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:45:52,876 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_change"}
+2026-09-28 19:45:52,876 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'response_change'}
+2026-09-28 19:45:55,645 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:45:55,646 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:55,646 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:45:55,646 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:45:58,526 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:45:58,527 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:45:58,527 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/options.py", "func_name": "response_add"}
+2026-09-28 19:45:58,527 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:45:58,527 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/options.py", "func_name": "response_change"}
+2026-09-28 19:45:58,527 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:06,007 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'response_change'}: False
+2026-09-28 19:46:06,008 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:46:09,884 - INFO - [round 1] tokens=1434 tool_calls=3 content=''
+2026-09-28 19:46:09,885 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:09,885 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/helpers.py', 'class_name': 'AdminReadonlyField'}
+2026-09-28 19:46:13,608 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:13,609 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:13,609 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:46:13,609 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:15,958 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:46:15,959 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:46:18,952 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/helpers.py', 'class_name': 'AdminReadonlyField'}: False
+2026-09-28 19:46:18,953 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:46:18,953 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "get_form"}
+2026-09-28 19:46:18,954 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_form'}
+2026-09-28 19:46:21,989 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:46:21,990 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:21,990 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:46:21,990 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:46:21,990 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:21,990 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:25,233 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:25,234 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:25,234 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:46:25,234 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:25,234 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/sites.py", "class_name": "AdminSite"}
+2026-09-28 19:46:25,234 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:31,870 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_form'}: False
+2026-09-28 19:46:31,871 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:46:31,871 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "get_readonly_fields"}
+2026-09-28 19:46:31,871 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_readonly_fields'}
+2026-09-28 19:46:34,789 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:34,790 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:34,790 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:46:34,790 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:46:34,790 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:46:34,790 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:37,954 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:46:37,955 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:37,955 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/options.py", "func_name": "response_add"}
+2026-09-28 19:46:37,955 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:40,746 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 19:46:40,746 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:46:44,132 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_readonly_fields'}: False
+2026-09-28 19:46:44,132 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:46:46,745 - INFO - [round 2] tokens=1558 tool_calls=1 content=''
+2026-09-28 19:46:46,746 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name":"django/contrib/admin/helpers.py","class_name":"AdminReadonlyField","func_name":"contents"}
+2026-09-28 19:46:46,746 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/helpers.py', 'class_name': 'AdminReadonlyField', 'func_name': 'contents'}
+2026-09-28 19:46:50,625 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:46:50,626 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:46:50,626 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:46:50,626 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:46:50,626 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:46:50,626 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:46:53,196 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:46:53,196 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:46:56,167 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/helpers.py', 'class_name': 'AdminReadonlyField', 'func_name': 'contents'}: False
+2026-09-28 19:46:56,168 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:46:59,362 - INFO - [round 3] tokens=1721 tool_calls=3 content=''
+2026-09-28 19:46:59,363 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/sites.py", "class_name": "AdminSite", "func_name": "admin_view"}
+2026-09-28 19:46:59,363 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/sites.py', 'class_name': 'AdminSite', 'func_name': 'admin_view'}
+2026-09-28 19:47:02,565 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:47:02,566 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/sites.py", "class_name": "AdminSite"}
+2026-09-28 19:47:02,567 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:04,368 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:47:04,369 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:47:06,563 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/sites.py', 'class_name': 'AdminSite', 'func_name': 'admin_view'}: False
+2026-09-28 19:47:06,564 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:47:06,564 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/sites.py", "class_name": "AdminSite", "func_name": "each_context"}
+2026-09-28 19:47:06,564 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/sites.py', 'class_name': 'AdminSite', 'func_name': 'each_context'}
+2026-09-28 19:47:09,998 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/sites.py", "class_name": "AdminSite"}
+2026-09-28 19:47:09,999 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:12,412 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:47:12,413 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:47:14,518 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/sites.py', 'class_name': 'AdminSite', 'func_name': 'each_context'}: False
+2026-09-28 19:47:14,519 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:47:14,519 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "InlineModelAdmin", "func_name": "get_formset"}
+2026-09-28 19:47:14,519 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'InlineModelAdmin', 'func_name': 'get_formset'}
+2026-09-28 19:47:17,830 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/helpers.py", "func_name": "get_admin_url"}
+2026-09-28 19:47:17,831 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:47:17,831 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:47:17,831 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:47:17,831 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField"}
+2026-09-28 19:47:17,831 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:19,886 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:47:19,887 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:47:21,982 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'InlineModelAdmin', 'func_name': 'get_formset'}: False
+2026-09-28 19:47:21,983 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:47:23,921 - INFO - [round 4] tokens=1819 tool_calls=1 content=''
+2026-09-28 19:47:23,922 - INFO - [round 4] [tool-call] exit args={}
+2026-09-28 19:47:23,922 - INFO -   [prune] start for exit args={}
+2026-09-28 19:47:27,654 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/helpers.py", "class_name": "AdminReadonlyField", "func_name": "get_admin_url"}
+2026-09-28 19:47:27,655 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:47:27,655 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_add"}
+2026-09-28 19:47:27,655 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:47:27,655 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "response_change"}
+2026-09-28 19:47:27,655 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:47:30,724 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/contrib/admin/helpers.py","class_name":"AdminReadonlyField"}
+2026-09-28 19:47:30,725 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:47:33,352 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name":"django/contrib/admin/helpers.py","func_name":"get_admin_url"}
+2026-09-28 19:47:33,353 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:47:35,853 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 19:47:35,854 - INFO - [round 4] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:47:35,854 - INFO - [round 4] model called exit(), ending tool loop
+2026-09-28 19:47:35,854 - INFO - ==== tool-call loop end ====
+2026-09-28 19:47:39,663 - INFO - <locations>
+  <location>
+    <file>django/contrib/admin/helpers.py</file>
+    <type>function</type>
+    <name>AdminReadonlyField.get_admin_url</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/helpers.py</file>
+    <type>class</type>
+    <name>AdminReadonlyField</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/options.py</file>
+    <type>function</type>
+    <name>ModelAdmin.get_form</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/options.py</file>
+    <type>function</type>
+    <name>ModelAdmin.response_add</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/sites.py</file>
+    <type>class</type>
+    <name>AdminSite</name>
+  </location>
+</locations>
+2026-09-28 19:47:39,664 - INFO - parsed locations: {'django/contrib/admin/helpers.py': ['function: AdminReadonlyField.get_admin_url\nclass: AdminReadonlyField'], 'django/contrib/admin/options.py': ['function: ModelAdmin.get_form\nfunction: ModelAdmin.response_add'], 'django/contrib/admin/sites.py': ['class: AdminSite']}

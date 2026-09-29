@@ -1,0 +1,399 @@
+2026-09-28 16:59:05,255 - INFO - Processing bug django__django-13121
+2026-09-28 16:59:05,256 - INFO - ================ localize django__django-13121 ================
+2026-09-28 16:59:08,544 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 16:59:15,097 - INFO - [round 0] tokens=1476 tool_calls=7 content=''
+2026-09-28 16:59:15,097 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:15,097 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations', 'func_name': 'convert_durationfield_value'}
+2026-09-28 16:59:17,740 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 16:59:17,741 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:17,741 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:17,741 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:20,165 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/db/backends/base/operations.py","class_name":"DatabaseOperations"}
+2026-09-28 16:59:20,166 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:22,788 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"django/db/backends/base/operations.py","class_name":"BaseDatabaseOperations"}
+2026-09-28 16:59:22,789 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:24,929 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations', 'func_name': 'convert_durationfield_value'}: True
+2026-09-28 16:59:24,929 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 16:59:24,930 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "as_sql"}
+2026-09-28 16:59:24,930 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': 'as_sql'}
+2026-09-28 16:59:28,761 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 16:59:28,762 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:28,762 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:28,762 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:32,089 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 16:59:32,090 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:32,090 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 16:59:32,090 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:34,914 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:59:34,915 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:59:37,400 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': 'as_sql'}: False
+2026-09-28 16:59:37,401 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:59:37,401 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 16:59:37,401 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/sqlite3/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'combine_duration_expression'}
+2026-09-28 16:59:40,173 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 16:59:40,174 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:40,174 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 16:59:40,174 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:40,174 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:40,175 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 16:59:43,645 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:43,646 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:43,646 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseWrapper"}
+2026-09-28 16:59:43,646 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:43,646 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseWrapper"}
+2026-09-28 16:59:43,646 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:45,924 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:59:45,925 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 16:59:48,500 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/sqlite3/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'combine_duration_expression'}: False
+2026-09-28 16:59:48,501 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 16:59:48,501 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 16:59:48,501 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/mysql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'combine_duration_expression'}
+2026-09-28 16:59:52,546 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 16:59:52,547 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:52,547 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 16:59:52,547 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 16:59:52,547 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:52,547 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 16:59:56,582 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/mysql/operations.py", "func_name": "combine_duration_expression"}
+2026-09-28 16:59:56,583 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:56,583 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/sqlite3/operations.py", "func_name": "combine_duration_expression"}
+2026-09-28 16:59:56,583 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:56,583 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 16:59:56,583 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 16:59:58,816 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 16:59:58,817 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:00:01,667 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/mysql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'combine_duration_expression'}: False
+2026-09-28 17:00:01,668 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:00:01,668 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "as_sql"}
+2026-09-28 17:00:01,668 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sql'}
+2026-09-28 17:00:05,287 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:00:05,288 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:05,288 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:00:05,288 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:08,111 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:00:08,112 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:00:10,293 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sql'}: False
+2026-09-28 17:00:10,294 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:00:10,294 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "compile"}
+2026-09-28 17:00:10,294 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'compile'}
+2026-09-28 17:00:12,871 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:00:12,871 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:12,872 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/expressions.py", "func_name": "DurationExpression"}
+2026-09-28 17:00:12,872 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:00:16,040 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:00:16,041 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:16,041 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:00:16,041 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:17,845 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:00:17,845 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:00:20,298 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'compile'}: False
+2026-09-28 17:00:20,298 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:00:20,298 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "format_for_duration_arithmetic"}
+2026-09-28 17:00:20,299 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations', 'func_name': 'format_for_duration_arithmetic'}
+2026-09-28 17:00:23,931 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:00:23,932 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:23,932 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations", "func_name": "format_for_duration_arithmetic"}
+2026-09-28 17:00:23,932 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:23,932 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations", "func_name": "format_for_duration_arithmetic"}
+2026-09-28 17:00:23,932 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:27,684 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:00:27,685 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:00:27,685 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/sqlite3/operations.py", "func_name": "format_for_duration_arithmetic"}
+2026-09-28 17:00:27,685 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:00:27,685 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/mysql/operations.py", "func_name": "format_for_duration_arithmetic"}
+2026-09-28 17:00:27,685 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:00:32,390 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "DatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:00:32,391 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:32,391 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 17:00:32,391 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:32,391 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 17:00:32,391 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:00:34,955 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations', 'func_name': 'format_for_duration_arithmetic'}: False
+2026-09-28 17:00:34,956 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:00:37,375 - INFO - [round 1] tokens=1696 tool_calls=1 content=''
+2026-09-28 17:00:37,376 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name":"django/db/backends/base/operations.py","class_name":"BaseDatabaseOperations"}
+2026-09-28 17:00:37,376 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations'}
+2026-09-28 17:00:41,065 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:00:41,066 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:41,066 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:00:41,066 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:41,066 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:00:41,066 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:43,668 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:00:43,669 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:00:46,108 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/base/operations.py', 'class_name': 'BaseDatabaseOperations'}: False
+2026-09-28 17:00:46,109 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:00:51,064 - INFO - [round 2] tokens=2014 tool_calls=7 content=''
+2026-09-28 17:00:51,064 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "resolve_expression"}
+2026-09-28 17:00:51,065 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': 'resolve_expression'}
+2026-09-28 17:00:54,080 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:00:54,081 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:54,081 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:00:54,082 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:00:57,126 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:00:57,127 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:57,127 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "Expression"}
+2026-09-28 17:00:57,127 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:00:59,474 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:00:59,475 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:01:02,510 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': 'resolve_expression'}: False
+2026-09-28 17:01:02,510 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:01:02,510 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "_resolve_output_field"}
+2026-09-28 17:01:02,510 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': '_resolve_output_field'}
+2026-09-28 17:01:05,705 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:01:05,706 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:05,706 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:05,706 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:01:10,076 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:01:10,077 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:10,077 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:01:10,077 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:12,841 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:01:12,841 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:01:15,616 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'CombinedExpression', 'func_name': '_resolve_output_field'}: False
+2026-09-28 17:01:15,617 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:01:15,617 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "as_sqlite"}
+2026-09-28 17:01:15,617 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sqlite'}
+2026-09-28 17:01:19,505 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:01:19,506 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:19,506 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:19,506 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:01:22,352 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:22,353 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:01:22,353 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:01:22,353 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:25,442 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:01:25,443 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:01:28,722 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sqlite'}: False
+2026-09-28 17:01:28,722 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:01:28,722 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "as_sql"}
+2026-09-28 17:01:28,723 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sql'}
+2026-09-28 17:01:31,674 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:01:31,675 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:31,675 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:01:31,675 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:34,641 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/expressions.py", "func_name": "combine_duration_expression"}
+2026-09-28 17:01:34,642 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:01:34,642 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:34,642 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:01:36,634 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:01:36,635 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:01:39,683 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_sql'}: False
+2026-09-28 17:01:39,684 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:01:39,684 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "as_mysql"}
+2026-09-28 17:01:39,684 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_mysql'}
+2026-09-28 17:01:42,744 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression"}
+2026-09-28 17:01:42,745 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:42,745 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:42,745 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:01:45,264 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:01:45,265 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:45,265 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:01:45,265 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:47,597 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:01:47,598 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:01:50,412 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'DurationExpression', 'func_name': 'as_mysql'}: False
+2026-09-28 17:01:50,413 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:01:50,413 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:50,413 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/sqlite3/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'convert_durationfield_value'}
+2026-09-28 17:01:53,582 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:01:53,583 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:53,583 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:01:53,583 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:53,583 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:01:53,583 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:01:56,782 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "DatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:01:56,783 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:01:56,783 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "as_sql"}
+2026-09-28 17:01:56,783 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:01:56,783 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "DurationExpression", "func_name": "as_sql"}
+2026-09-28 17:01:56,783 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:03,551 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/sqlite3/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'convert_durationfield_value'}: True
+2026-09-28 17:02:03,552 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:03,552 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:03,552 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/mysql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'convert_durationfield_value'}
+2026-09-28 17:02:06,238 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:06,239 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:06,239 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:02:06,239 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:06,239 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:02:06,240 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:08,960 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/mysql/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/sqlite3/operations.py", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:08,961 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:02:12,839 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:12,840 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:12,840 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "DatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:12,840 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:12,840 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "as_sql"}
+2026-09-28 17:02:12,840 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:15,049 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/mysql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'convert_durationfield_value'}: ```False```
+2026-09-28 17:02:15,050 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:02:17,614 - INFO - [round 3] tokens=2212 tool_calls=1 content=''
+2026-09-28 17:02:17,615 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 17:02:17,615 - INFO -   [prune] start for exit args={}
+2026-09-28 17:02:21,548 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "convert_durationfield_value"}
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression", "func_name": "as_sql"}
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations", "func_name": "combine_duration_expression"}
+2026-09-28 17:02:21,549 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:02:24,897 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations"}
+2026-09-28 17:02:24,898 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:24,898 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "CombinedExpression"}
+2026-09-28 17:02:24,898 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:24,898 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:02:24,898 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:24,899 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 17:02:24,899 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:02:27,574 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:02:27,575 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:02:30,059 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 17:02:30,060 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:02:30,060 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 17:02:30,060 - INFO - ==== tool-call loop end ====
+2026-09-28 17:02:34,129 - INFO - <locations>
+  <location>
+    <file>django/db/backends/base/operations.py</file>
+    <type>function</type>
+    <name>BaseDatabaseOperations.convert_durationfield_value</name>
+  </location>
+  <location>
+    <file>django/db/models/expressions.py</file>
+    <type>class</type>
+    <name>DurationExpression</name>
+  </location>
+  <location>
+    <file>django/db/backends/sqlite3/operations.py</file>
+    <type>function</type>
+    <name>DatabaseOperations.combine_duration_expression</name>
+  </location>
+  <location>
+    <file>django/db/backends/mysql/operations.py</file>
+    <type>function</type>
+    <name>DatabaseOperations.combine_duration_expression</name>
+  </location>
+  <location>
+    <file>django/db/models/expressions.py</file>
+    <type>function</type>
+    <name>CombinedExpression.as_sql</name>
+  </location>
+</locations>
+2026-09-28 17:02:34,130 - INFO - parsed locations: {'django/db/backends/base/operations.py': ['function: BaseDatabaseOperations.convert_durationfield_value'], 'django/db/models/expressions.py': ['class: DurationExpression\nfunction: CombinedExpression.as_sql'], 'django/db/backends/sqlite3/operations.py': ['function: DatabaseOperations.combine_duration_expression'], 'django/db/backends/mysql/operations.py': ['function: DatabaseOperations.combine_duration_expression']}

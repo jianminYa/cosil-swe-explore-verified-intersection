@@ -1,0 +1,26 @@
+2026-09-28 16:16:53,155 - INFO - Processing bug django__django-12325
+2026-09-28 16:16:53,155 - INFO - ================ localize django__django-12325 ================
+2026-09-28 16:16:56,207 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\npk setup for MTI to parent get confused by multiple OneToOne references.\nDescription\n\t\nclass Document(models.Model):\n\tpass\nclass Picking(Document):\n\tdocument_ptr = models.OneToOneField(Document, on_delete=models.CASCADE, parent_link=True, related_name=\'+\')\n\torigin = models.OneToOneField(Document, related_name=\'picking\', on_delete=models.PROTECT)\nproduces django.core.exceptions.ImproperlyConfigured: Add parent_link=True to appname.Picking.origin.\nclass Picking(Document):\n\torigin = models.OneToOneField(Document, related_name=\'picking\', on_delete=models.PROTECT)\n\tdocument_ptr = models.OneToOneField(Document, on_delete=models.CASCADE, parent_link=True, related_name=\'+\')\nWorks\nFirst issue is that order seems to matter?\nEven if ordering is required "by design"(It shouldn\'t be we have explicit parent_link marker) shouldn\'t it look from top to bottom like it does with managers and other things?\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 16:16:56,207 - INFO - ================================================================================
+2026-09-28 16:17:00,515 - INFO - ```
+django/db/models/base.py
+django/db/models/options.py
+django/db/models/fields/related.py
+django/db/models/fields/related_descriptors.py
+django/db/models/__init__.py
+```
+2026-09-28 16:17:03,443 - INFO - ```
+django/db/models/base.py
+django/db/models/options.py
+django/db/models/fields/related.py
+django/db/models/fields/related_descriptors.py
+django/db/models/__init__.py
+```
+2026-09-28 16:17:07,738 - INFO - ```
+django/db/models/base.py
+django/db/models/options.py
+django/db/models/fields/related.py
+django/db/models/fields/related_descriptors.py
+django/db/models/__init__.py
+```

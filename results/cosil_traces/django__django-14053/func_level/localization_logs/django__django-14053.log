@@ -1,0 +1,213 @@
+2026-09-28 18:34:20,024 - INFO - Processing bug django__django-14053
+2026-09-28 18:34:20,024 - INFO - ================ localize django__django-14053 ================
+2026-09-28 18:34:23,300 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 18:34:26,682 - INFO - [round 0] tokens=1744 tool_calls=3 content=''
+2026-09-28 18:34:26,682 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:34:26,682 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin'}
+2026-09-28 18:34:29,617 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:34:29,618 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:29,618 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "ManifestStaticFilesStorage"}
+2026-09-28 18:34:29,619 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:29,619 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "CachedStaticFilesStorage"}
+2026-09-28 18:34:29,619 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:32,997 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "StaticFilesStorage"}
+2026-09-28 18:34:32,998 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:32,998 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command"}
+2026-09-28 18:34:32,998 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:35,729 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:34:35,729 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:34:38,521 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin'}: False
+2026-09-28 18:34:38,521 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:34:38,521 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command", "func_name": "collect"}
+2026-09-28 18:34:38,522 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/management/commands/collectstatic.py', 'class_name': 'Command', 'func_name': 'collect'}
+2026-09-28 18:34:41,764 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command"}
+2026-09-28 18:34:41,765 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:41,765 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:34:41,765 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:45,224 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "func_name": "collect"}
+2026-09-28 18:34:45,225 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:34:45,225 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/staticfiles/storage.py", "func_name": "post_process"}
+2026-09-28 18:34:45,225 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:34:47,962 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:34:47,963 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:34:50,699 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/management/commands/collectstatic.py', 'class_name': 'Command', 'func_name': 'collect'}: False
+2026-09-28 18:34:50,700 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:34:50,700 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "ManifestFilesMixin", "func_name": "post_process"}
+2026-09-28 18:34:50,700 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'ManifestFilesMixin', 'func_name': 'post_process'}
+2026-09-28 18:34:53,231 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:34:53,232 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:53,232 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "ManifestFilesMixin"}
+2026-09-28 18:34:53,232 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:34:56,488 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"django/contrib/staticfiles/storage.py","func_name":"post_process"}
+2026-09-28 18:34:56,489 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:34:58,934 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:34:58,935 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:00,950 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'ManifestFilesMixin', 'func_name': 'post_process'}: False
+2026-09-28 18:35:00,951 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:35:03,846 - INFO - [round 1] tokens=1964 tool_calls=3 content=''
+2026-09-28 18:35:03,847 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "post_process"}
+2026-09-28 18:35:03,847 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'post_process'}
+2026-09-28 18:35:06,230 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:35:06,231 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:09,421 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:35:09,422 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:12,377 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'post_process'}: True
+2026-09-28 18:35:12,378 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:35:12,378 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "_post_process"}
+2026-09-28 18:35:12,378 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': '_post_process'}
+2026-09-28 18:35:14,947 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:35:14,948 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:17,187 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:35:17,188 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:19,397 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': '_post_process'}: ```False```
+2026-09-28 18:35:19,398 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:35:19,398 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "hashed_name"}
+2026-09-28 18:35:19,398 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'hashed_name'}
+2026-09-28 18:35:22,527 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:35:22,528 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:22,528 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command"}
+2026-09-28 18:35:22,528 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:26,798 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:35:26,799 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:29,775 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'hashed_name'}: False
+2026-09-28 18:35:29,776 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:35:32,438 - INFO - [round 2] tokens=2088 tool_calls=1 content=''
+2026-09-28 18:35:32,439 - INFO - [round 2] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:35:32,439 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin'}
+2026-09-28 18:35:35,711 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:35:35,712 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:35,712 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "ManifestStaticFilesStorage"}
+2026-09-28 18:35:35,712 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:35,712 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command"}
+2026-09-28 18:35:35,712 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:39,333 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "ManifestFilesMixin"}
+2026-09-28 18:35:39,334 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:39,334 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "CachedFilesMixin"}
+2026-09-28 18:35:39,334 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:39,334 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "CollectstaticCommand"}
+2026-09-28 18:35:39,334 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:41,263 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:35:41,264 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:44,097 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin'}: False
+2026-09-28 18:35:44,098 - INFO - [round 2] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:35:48,221 - INFO - [round 3] tokens=2257 tool_calls=3 content=''
+2026-09-28 18:35:48,222 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "url_converter"}
+2026-09-28 18:35:48,222 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'url_converter'}
+2026-09-28 18:35:50,462 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:35:50,463 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:35:52,880 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:35:52,881 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:35:55,773 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'url_converter'}: False
+2026-09-28 18:35:55,774 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:35:55,774 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "_url"}
+2026-09-28 18:35:55,774 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': '_url'}
+2026-09-28 18:35:58,194 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:35:58,195 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:36:01,073 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:36:01,074 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:36:03,983 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': '_url'}: ```False```
+2026-09-28 18:36:03,983 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:36:03,983 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin", "func_name": "stored_name"}
+2026-09-28 18:36:03,983 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'stored_name'}
+2026-09-28 18:36:06,306 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/contrib/staticfiles/storage.py","class_name":"HashedFilesMixin"}
+2026-09-28 18:36:06,307 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:36:09,111 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:36:09,112 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:36:11,787 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/staticfiles/storage.py', 'class_name': 'HashedFilesMixin', 'func_name': 'stored_name'}: False
+2026-09-28 18:36:11,788 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:36:13,957 - INFO - [round 4] tokens=2355 tool_calls=1 content=''
+2026-09-28 18:36:13,958 - INFO - [round 4] [tool-call] exit args={}
+2026-09-28 18:36:13,958 - INFO -   [prune] start for exit args={}
+2026-09-28 18:36:17,019 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:36:17,020 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:36:17,020 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "class_name": "Command", "func_name": "collect"}
+2026-09-28 18:36:17,020 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:36:20,473 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/staticfiles/storage.py", "class_name": "HashedFilesMixin"}
+2026-09-28 18:36:20,474 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:36:20,474 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/staticfiles/management/commands/collectstatic.py", "func_name": "collect"}
+2026-09-28 18:36:20,474 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:36:23,850 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:36:23,851 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:36:26,063 - INFO -   [prune] decision for exit args={}: ```False```
+2026-09-28 18:36:26,064 - INFO - [round 4] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:36:26,064 - INFO - [round 4] model called exit(), ending tool loop
+2026-09-28 18:36:26,064 - INFO - ==== tool-call loop end ====
+2026-09-28 18:36:30,538 - INFO - <locations>
+  <location>
+    <file>django/contrib/staticfiles/storage.py</file>
+    <type>function</type>
+    <name>HashedFilesMixin.post_process</name>
+  </location>
+  <location>
+    <file>django/contrib/staticfiles/storage.py</file>
+    <type>class</type>
+    <name>HashedFilesMixin</name>
+  </location>
+  <location>
+    <file>django/contrib/staticfiles/management/commands/collectstatic.py</file>
+    <type>function</type>
+    <name>Command.collect</name>
+  </location>
+  <location>
+    <file>django/contrib/staticfiles/storage.py</file>
+    <type>function</type>
+    <name>HashedFilesMixin._post_process</name>
+  </location>
+  <location>
+    <file>django/contrib/staticfiles/storage.py</file>
+    <type>class</type>
+    <name>ManifestStaticFilesStorage</name>
+  </location>
+</locations>
+2026-09-28 18:36:30,540 - INFO - parsed locations: {'django/contrib/staticfiles/storage.py': ['function: HashedFilesMixin.post_process\nclass: HashedFilesMixin\nfunction: HashedFilesMixin._post_process\nclass: ManifestStaticFilesStorage'], 'django/contrib/staticfiles/management/commands/collectstatic.py': ['function: Command.collect']}

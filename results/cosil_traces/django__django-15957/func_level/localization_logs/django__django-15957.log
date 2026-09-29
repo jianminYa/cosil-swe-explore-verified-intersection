@@ -1,0 +1,228 @@
+2026-09-28 21:09:24,998 - INFO - Processing bug django__django-15957
+2026-09-28 21:09:24,999 - INFO - ================ localize django__django-15957 ================
+2026-09-28 21:09:28,210 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 21:09:31,720 - INFO - [round 0] tokens=1198 tool_calls=3 content=''
+2026-09-28 21:09:31,720 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:09:31,720 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/query.py', 'class_name': 'Prefetch'}
+2026-09-28 21:09:34,712 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "prefetch_related_objects"}
+2026-09-28 21:09:34,713 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:09:34,713 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:09:34,713 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:34,713 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:09:34,713 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:37,400 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:09:37,401 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:09:39,664 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/query.py', 'class_name': 'Prefetch'}: ```False```
+2026-09-28 21:09:39,665 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:09:39,665 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "prefetch_related"}
+2026-09-28 21:09:39,666 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': 'prefetch_related'}
+2026-09-28 21:09:42,444 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:09:42,445 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:42,445 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:09:42,445 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:45,195 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:09:45,196 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:09:47,859 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': 'prefetch_related'}: False
+2026-09-28 21:09:47,860 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:09:47,860 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "_filter_or_exclude"}
+2026-09-28 21:09:47,860 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': '_filter_or_exclude'}
+2026-09-28 21:09:50,908 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:09:50,909 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:50,909 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:09:50,909 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:09:53,285 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"django/db/models/query.py","func_name":"prefetch_related_objects"}
+2026-09-28 21:09:53,286 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:09:55,715 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 21:09:55,716 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:09:58,463 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': '_filter_or_exclude'}: ```False```
+2026-09-28 21:09:58,464 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:01,181 - INFO - [round 1] tokens=1400 tool_calls=3 content=''
+2026-09-28 21:10:01,181 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "_prefetch_related_objects"}
+2026-09-28 21:10:01,182 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': '_prefetch_related_objects'}
+2026-09-28 21:10:03,553 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:10:03,554 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:03,554 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "prefetch_related_objects"}
+2026-09-28 21:10:03,554 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:10:05,798 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:10:05,799 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:10:08,553 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': '_prefetch_related_objects'}: False
+2026-09-28 21:10:08,554 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:08,554 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "prefetch_related_objects"}
+2026-09-28 21:10:08,554 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/db/models/query.py', 'func_name': 'prefetch_related_objects'}
+2026-09-28 21:10:11,854 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "prefetch_related"}
+2026-09-28 21:10:11,854 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:11,855 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "_prefetch_related_objects"}
+2026-09-28 21:10:11,855 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:11,855 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "Prefetch", "func_name": "__init__"}
+2026-09-28 21:10:11,855 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:14,873 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:10:14,874 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:14,874 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:10:14,874 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:17,222 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 21:10:17,223 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:10:19,724 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/db/models/query.py', 'func_name': 'prefetch_related_objects'}: False
+2026-09-28 21:10:19,725 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:19,725 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "prefetch_one_level"}
+2026-09-28 21:10:19,725 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/db/models/query.py', 'func_name': 'prefetch_one_level'}
+2026-09-28 21:10:23,257 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "prefetch_related"}
+2026-09-28 21:10:23,258 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:23,258 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "_prefetch_related_objects"}
+2026-09-28 21:10:23,258 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:23,258 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "Prefetch", "func_name": "__init__"}
+2026-09-28 21:10:23,258 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:10:25,891 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/db/models/query.py","class_name":"QuerySet"}
+2026-09-28 21:10:25,892 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:27,984 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"django/db/models/query.py","class_name":"Prefetch"}
+2026-09-28 21:10:27,985 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:30,265 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/db/models/query.py', 'func_name': 'prefetch_one_level'}: False
+2026-09-28 21:10:30,266 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:34,120 - INFO - [round 2] tokens=1636 tool_calls=3 content=''
+2026-09-28 21:10:34,120 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ReverseManyToOneDescriptor", "func_name": "get_prefetch_queryset"}
+2026-09-28 21:10:34,121 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ReverseManyToOneDescriptor', 'func_name': 'get_prefetch_queryset'}
+2026-09-28 21:10:36,529 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/db/models/fields/related_descriptors.py","class_name":"ReverseManyToOneDescriptor"}
+2026-09-28 21:10:36,530 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:38,929 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/db/models/fields/related_descriptors.py","class_name":"ReverseManyToOneDescriptor"}
+2026-09-28 21:10:38,930 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:41,188 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name":"django/db/models/fields/related_descriptors.py","func_name":"_filter_prefetch_queryset"}
+2026-09-28 21:10:41,189 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:10:43,326 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ReverseManyToOneDescriptor', 'func_name': 'get_prefetch_queryset'}: False
+2026-09-28 21:10:43,327 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:43,327 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ManyToManyDescriptor", "func_name": "get_prefetch_queryset"}
+2026-09-28 21:10:43,327 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ManyToManyDescriptor', 'func_name': 'get_prefetch_queryset'}
+2026-09-28 21:10:46,753 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ManyToManyDescriptor"}
+2026-09-28 21:10:46,754 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:46,754 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ReverseManyToOneDescriptor"}
+2026-09-28 21:10:46,754 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:46,754 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:10:46,754 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:49,413 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:10:49,413 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:10:52,394 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ManyToManyDescriptor', 'func_name': 'get_prefetch_queryset'}: False
+2026-09-28 21:10:52,395 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:10:52,395 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ForwardManyToOneDescriptor", "func_name": "get_prefetch_queryset"}
+2026-09-28 21:10:52,395 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ForwardManyToOneDescriptor', 'func_name': 'get_prefetch_queryset'}
+2026-09-28 21:10:55,172 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/db/models/fields/related_descriptors.py","class_name":"ForwardManyToOneDescriptor"}
+2026-09-28 21:10:55,173 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:10:58,440 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/db/models/fields/related_descriptors.py","class_name":"ReverseManyToOneDescriptor"}
+2026-09-28 21:10:58,441 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:01,032 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"django/db/models/query.py","class_name":"Prefetch"}
+2026-09-28 21:11:01,033 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:03,760 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ForwardManyToOneDescriptor', 'func_name': 'get_prefetch_queryset'}: False
+2026-09-28 21:11:03,761 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:11:06,105 - INFO - [round 3] tokens=1760 tool_calls=1 content=''
+2026-09-28 21:11:06,106 - INFO - [round 3] [tool-call] get_code_of_class args={"file_name":"django/db/models/fields/related_descriptors.py","class_name":"ReverseManyToOneDescriptor"}
+2026-09-28 21:11:06,106 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ReverseManyToOneDescriptor'}
+2026-09-28 21:11:09,876 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ReverseManyToOneDescriptor"}
+2026-09-28 21:11:09,877 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:09,877 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:11:09,877 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:12,699 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "prefetch_related_objects"}
+2026-09-28 21:11:12,700 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:11:12,700 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "normalize_prefetch_lookups"}
+2026-09-28 21:11:12,700 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:11:15,627 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 21:11:15,628 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:15,628 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related_descriptors.py", "class_name": "ManyToManyDescriptor"}
+2026-09-28 21:11:15,628 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:17,607 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/fields/related_descriptors.py', 'class_name': 'ReverseManyToOneDescriptor'}: False
+2026-09-28 21:11:17,608 - INFO - [round 3] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:11:20,238 - INFO - [round 4] tokens=1808 tool_calls=1 content=''
+2026-09-28 21:11:20,239 - INFO - [round 4] [tool-call] exit args={}
+2026-09-28 21:11:20,239 - INFO -   [prune] start for exit args={}
+2026-09-28 21:11:23,108 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "Prefetch"}
+2026-09-28 21:11:23,109 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:11:23,109 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "prefetch_related"}
+2026-09-28 21:11:23,109 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:11:23,109 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "_filter_or_exclude"}
+2026-09-28 21:11:23,109 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:11:25,167 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:11:25,168 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:11:27,642 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 21:11:27,643 - INFO - [round 4] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:11:27,643 - INFO - [round 4] model called exit(), ending tool loop
+2026-09-28 21:11:27,643 - INFO - ==== tool-call loop end ====
+2026-09-28 21:11:32,220 - INFO - <locations>
+  <location>
+    <file>django/db/models/query.py</file>
+    <type>function</type>
+    <name>prefetch_one_level</name>
+  </location>
+  <location>
+    <file>django/db/models/fields/related_descriptors.py</file>
+    <type>function</type>
+    <name>ReverseManyToOneDescriptor.get_prefetch_querysets</name>
+  </location>
+  <location>
+    <file>django/db/models/query.py</file>
+    <type>class</type>
+    <name>Prefetch</name>
+  </location>
+  <location>
+    <file>django/db/models/query.py</file>
+    <type>function</type>
+    <name>QuerySet._filter_or_exclude</name>
+  </location>
+  <location>
+    <file>django/db/models/sql/query.py</file>
+    <type>function</type>
+    <name>Query.can_filter</name>
+  </location>
+</locations>
+2026-09-28 21:11:32,221 - INFO - parsed locations: {'django/db/models/query.py': ['function: prefetch_one_level\nclass: Prefetch\nfunction: QuerySet._filter_or_exclude'], 'django/db/models/fields/related_descriptors.py': ['function: ReverseManyToOneDescriptor.get_prefetch_querysets'], 'django/db/models/sql/query.py': ['function: Query.can_filter']}

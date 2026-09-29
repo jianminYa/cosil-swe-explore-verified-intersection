@@ -1,0 +1,26 @@
+2026-09-29 07:09:30,952 - INFO - Processing bug sympy__sympy-21612
+2026-09-29 07:09:30,952 - INFO - ================ localize sympy__sympy-21612 ================
+2026-09-29 07:09:34,068 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nLatex parsing of fractions yields wrong expression due to missing brackets\nProblematic latex expression: `"\\\\frac{\\\\frac{a^3+b}{c}}{\\\\frac{1}{c^2}}"`\r\n\r\nis parsed to: `((a**3 + b)/c)/1/(c**2)`.\r\n\r\nExpected is: `((a**3 + b)/c)/(1/(c**2))`. \r\n\r\nThe missing brackets in the denominator result in a wrong expression.\r\n\r\n## Tested on\r\n\r\n- 1.8\r\n- 1.6.2\r\n\r\n## Reproduce:\r\n\r\n```\r\nroot@d31ef1c26093:/# python3\r\nPython 3.6.9 (default, Jan 26 2021, 15:33:00)\r\n[GCC 8.4.0] on linux\r\nType "help", "copyright", "credits" or "license" for more information.\r\n>>> from sympy.parsing.latex import parse_latex\r\n>>> parse_latex("\\\\frac{\\\\frac{a^3+b}{c}}{\\\\frac{1}{c^2}}")\r\n((a**3 + b)/c)/1/(c**2)\r\n\r\n\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-29 07:09:34,068 - INFO - ================================================================================
+2026-09-29 07:09:36,969 - INFO - ```
+sympy/parsing/latex/_parse_latex_antlr.py
+sympy/parsing/latex/latex_parser.py
+sympy/parsing/latex/__init__.py
+sympy/parsing/latex/_antlr/latexparser.py
+sympy/parsing/latex/errors.py
+```
+2026-09-29 07:09:39,859 - INFO - ```
+sympy/parsing/latex/_parse_latex_antlr.py
+sympy/parsing/latex/latex_parser.py
+sympy/parsing/latex/_antlr/latexparser.py
+sympy/parsing/latex/__init__.py
+sympy/parsing/latex/errors.py
+```
+2026-09-29 07:09:42,114 - INFO - ```
+sympy/parsing/latex/_parse_latex_antlr.py
+sympy/parsing/latex/_antlr/latexparser.py
+sympy/parsing/latex/latex_parser.py
+sympy/parsing/latex/__init__.py
+sympy/parsing/latex/errors.py
+```

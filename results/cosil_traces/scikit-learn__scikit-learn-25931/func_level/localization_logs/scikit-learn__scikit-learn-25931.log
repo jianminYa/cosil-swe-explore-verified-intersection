@@ -1,0 +1,223 @@
+2026-09-29 03:17:59,682 - INFO - Processing bug scikit-learn__scikit-learn-25931
+2026-09-29 03:17:59,682 - INFO - ================ localize scikit-learn__scikit-learn-25931 ================
+2026-09-29 03:18:02,858 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-29 03:18:06,592 - INFO - [round 0] tokens=1861 tool_calls=4 content=''
+2026-09-29 03:18:06,593 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:18:06,593 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest'}
+2026-09-29 03:18:08,835 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:18:08,836 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:15,599 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:18:15,600 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:17,339 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 03:18:17,340 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:18:20,152 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest'}: ```False```
+2026-09-29 03:18:20,152 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:18:20,152 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator"}
+2026-09-29 03:18:20,153 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/base.py', 'class_name': 'BaseEstimator'}
+2026-09-29 03:18:22,761 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:18:22,762 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:22,762 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator"}
+2026-09-29 03:18:22,762 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:28,854 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "sklearn/ensemble/_iforest.py", "func_name": "_average_path_length"}
+2026-09-29 03:18:28,855 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:18:28,855 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "sklearn/base.py", "func_name": "clone"}
+2026-09-29 03:18:28,855 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:18:32,754 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "fit"}
+2026-09-29 03:18:32,755 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:18:32,755 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "score_samples"}
+2026-09-29 03:18:32,755 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:18:34,463 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/base.py', 'class_name': 'BaseEstimator'}: False
+2026-09-29 03:18:34,464 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:18:34,464 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "sklearn/utils/validation.py", "func_name": "_check_feature_names_in"}
+2026-09-29 03:18:34,464 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'sklearn/utils/validation.py', 'func_name': '_check_feature_names_in'}
+2026-09-29 03:18:46,689 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "fit"}
+2026-09-29 03:18:46,690 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:18:46,690 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator", "func_name": "_check_feature_names"}
+2026-09-29 03:18:46,690 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:18:46,690 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "score_samples"}
+2026-09-29 03:18:46,690 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:18:49,064 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:18:49,065 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:49,065 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator"}
+2026-09-29 03:18:49,065 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:53,575 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 03:18:53,576 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:18:56,262 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'sklearn/utils/validation.py', 'func_name': '_check_feature_names_in'}: ```False```
+2026-09-29 03:18:56,263 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:18:56,263 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_bagging.py", "class_name": "BaseBagging"}
+2026-09-29 03:18:56,263 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/ensemble/_bagging.py', 'class_name': 'BaseBagging'}
+2026-09-29 03:18:59,021 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:18:59,022 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:18:59,022 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator"}
+2026-09-29 03:18:59,022 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:03,313 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "sklearn/ensemble/_iforest.py", "func_name": "_average_path_length"}
+2026-09-29 03:19:03,314 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:19:03,314 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "sklearn/utils/validation.py", "func_name": "_check_feature_names_in"}
+2026-09-29 03:19:03,314 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:19:05,828 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 03:19:05,829 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:08,777 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/ensemble/_bagging.py', 'class_name': 'BaseBagging'}: ```False```
+2026-09-29 03:19:08,777 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:11,992 - INFO - [round 1] tokens=2135 tool_calls=4 content=''
+2026-09-29 03:19:11,992 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "fit"}
+2026-09-29 03:19:11,993 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'fit'}
+2026-09-29 03:19:13,873 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:19:13,874 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:16,063 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:16,064 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:19,020 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'fit'}: ```False```
+2026-09-29 03:19:19,021 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:19,021 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "score_samples"}
+2026-09-29 03:19:19,021 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'score_samples'}
+2026-09-29 03:19:21,842 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:19:21,843 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:21,843 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "sklearn/ensemble/_iforest.py", "func_name": "score_samples"}
+2026-09-29 03:19:21,843 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:19:24,435 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:24,435 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:27,142 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'score_samples'}: False
+2026-09-29 03:19:27,143 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:27,143 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "decision_function"}
+2026-09-29 03:19:27,143 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'decision_function'}
+2026-09-29 03:19:30,285 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:19:30,286 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:30,286 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "sklearn/ensemble/_iforest.py", "func_name": "_average_path_length"}
+2026-09-29 03:19:30,286 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:19:32,863 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:32,863 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:35,172 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'decision_function'}: False
+2026-09-29 03:19:35,173 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:35,173 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator", "func_name": "_check_feature_names"}
+2026-09-29 03:19:35,173 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/base.py', 'class_name': 'BaseEstimator', 'func_name': '_check_feature_names'}
+2026-09-29 03:19:38,677 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator"}
+2026-09-29 03:19:38,678 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:38,678 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:19:38,678 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:41,439 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:41,440 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:43,584 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/base.py', 'class_name': 'BaseEstimator', 'func_name': '_check_feature_names'}: ```False```
+2026-09-29 03:19:43,584 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:47,052 - INFO - [round 2] tokens=2380 tool_calls=3 content=''
+2026-09-29 03:19:47,053 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "predict"}
+2026-09-29 03:19:47,053 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'predict'}
+2026-09-29 03:19:49,578 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:19:49,579 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:52,263 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:52,264 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:19:54,968 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': 'predict'}: ```False```
+2026-09-29 03:19:54,969 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:19:54,969 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "_compute_chunked_score_samples"}
+2026-09-29 03:19:54,969 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': '_compute_chunked_score_samples'}
+2026-09-29 03:19:57,114 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:19:57,115 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:19:59,691 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:19:59,692 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:20:02,667 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': '_compute_chunked_score_samples'}: 
+2026-09-29 03:20:02,667 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:20:02,667 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest", "func_name": "_compute_score_samples"}
+2026-09-29 03:20:02,668 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': '_compute_score_samples'}
+2026-09-29 03:20:05,048 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/_iforest.py","class_name":"IsolationForest"}
+2026-09-29 03:20:05,049 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:20:07,425 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 03:20:07,426 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:20:09,714 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_iforest.py', 'class_name': 'IsolationForest', 'func_name': '_compute_score_samples'}: False
+2026-09-29 03:20:09,715 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:20:12,235 - INFO - [round 3] tokens=2478 tool_calls=1 content=''
+2026-09-29 03:20:12,235 - INFO - [round 3] [tool-call] exit args={}
+2026-09-29 03:20:12,235 - INFO -   [prune] start for exit args={}
+2026-09-29 03:20:15,661 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_iforest.py", "class_name": "IsolationForest"}
+2026-09-29 03:20:15,662 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 03:20:15,662 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator", "func_name": "_check_feature_names"}
+2026-09-29 03:20:15,662 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:20:15,662 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/base.py", "class_name": "BaseEstimator", "func_name": "_validate_data"}
+2026-09-29 03:20:15,662 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 03:20:18,540 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"sklearn/ensemble/_iforest.py","func_name":"_average_path_length"}
+2026-09-29 03:20:18,541 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 03:20:21,029 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 03:20:21,030 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 03:20:23,367 - INFO -   [prune] decision for exit args={}: False
+2026-09-29 03:20:23,367 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 03:20:23,367 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-29 03:20:23,367 - INFO - ==== tool-call loop end ====
+2026-09-29 03:20:26,996 - INFO - <locations>
+  <location>
+    <file>sklearn/ensemble/_iforest.py</file>
+    <type>function</type>
+    <name>IsolationForest.fit</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_iforest.py</file>
+    <type>function</type>
+    <name>IsolationForest.score_samples</name>
+  </location>
+  <location>
+    <file>sklearn/base.py</file>
+    <type>function</type>
+    <name>BaseEstimator._check_feature_names</name>
+  </location>
+  <location>
+    <file>sklearn/utils/validation.py</file>
+    <type>function</type>
+    <name>check_array</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_iforest.py</file>
+    <type>class</type>
+    <name>IsolationForest</name>
+  </location>
+</locations>
+2026-09-29 03:20:26,997 - INFO - parsed locations: {'sklearn/ensemble/_iforest.py': ['function: IsolationForest.fit\nfunction: IsolationForest.score_samples\nclass: IsolationForest'], 'sklearn/base.py': ['function: BaseEstimator._check_feature_names'], 'sklearn/utils/validation.py': ['function: check_array']}

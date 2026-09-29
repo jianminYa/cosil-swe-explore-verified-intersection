@@ -1,0 +1,42 @@
+top_k values: [5]
+Filtered to 451/451 instances with non-empty core
+
+▶ cosil  (451 to run, 0 resumed, top_k=[5])
+
+  [ERROR] cosil astropy__astropy-12907: CoSIL file-level failed for astropy__astropy-12907: conda run -n cosil failed (rc=1):
+STDOUT:
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+STDERR:
+
+  0%|[35m          [0m| 0/1 [00:00<?, ?it/s]
+  0%|[35m          [0m| 0/1 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py", line 871, in completion
+    raise e
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py", line 807, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py", line 385, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/litellm/llms/openai/openai.py", line 520, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/jql/miniforge3/envs/cosil/lib/python3.11/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/
+  [cosil] 1/451  0.1 it/s  ETA 6025s  

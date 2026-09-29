@@ -1,0 +1,26 @@
+2026-09-29 05:32:30,321 - INFO - Processing bug sympy__sympy-13757
+2026-09-29 05:32:30,322 - INFO - ================ localize sympy__sympy-13757 ================
+2026-09-29 05:32:33,327 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nMultiplying an expression by a Poly does not evaluate when the expression is on the left side of the multiplication\nTested in Python 3.4 64-bit and 3.6 64-bit\r\nVersion: 1.1.2.dev0\r\n```\r\n>>> Poly(x)*x\r\nPoly(x**2, x, domain='ZZ')\r\n\r\n>>> x*Poly(x)\r\nx*Poly(x, x, domain='ZZ')\r\n\r\n>>> -2*Poly(x)\r\nPoly(-2*x, x, domain='ZZ')\r\n\r\n>>> S(-2)*Poly(x)\r\n-2*Poly(x, x, domain='ZZ')\r\n\r\n>>> Poly(x)*S(-2)\r\nPoly(-2*x, x, domain='ZZ')\r\n```\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 05:32:33,327 - INFO - ================================================================================
+2026-09-29 05:32:36,508 - INFO - ```
+sympy/polys/polytools.py
+sympy/core/expr.py
+sympy/core/mul.py
+sympy/core/numbers.py
+sympy/core/decorators.py
+```
+2026-09-29 05:32:38,953 - INFO - ```
+sympy/polys/polytools.py
+sympy/core/expr.py
+sympy/core/mul.py
+sympy/core/numbers.py
+sympy/core/decorators.py
+```
+2026-09-29 05:32:40,959 - INFO - ```
+sympy/core/mul.py
+sympy/core/expr.py
+sympy/polys/polytools.py
+sympy/core/decorators.py
+sympy/core/numbers.py
+```

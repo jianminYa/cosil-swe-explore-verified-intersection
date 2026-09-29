@@ -1,0 +1,24 @@
+2026-09-29 02:06:29,369 - INFO - Processing bug pytest-dev__pytest-7571
+2026-09-29 02:06:29,369 - INFO - ================ localize pytest-dev__pytest-7571 ================
+2026-09-29 02:06:32,420 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\ncaplog fixture doesn\'t restore log level after test\nFrom the documentation at https://docs.pytest.org/en/6.0.0/logging.html#caplog-fixture, "The log levels set are restored automatically at the end of the test".\r\nIt used to work, but looks broken in new 6.0 release. Minimal example to reproduce:\r\n\r\n```\r\ndef test_foo(caplog):\r\n    caplog.set_level(42)\r\n\r\ndef test_bar(caplog):\r\n    print(caplog.handler.level)\r\n```\r\n\r\nIt prints "0" for pytest<6, "42" after.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-29 02:06:32,420 - INFO - ================================================================================
+2026-09-29 02:06:35,251 - INFO - ```
+src/_pytest/logging.py
+testing/logging/test_fixture.py
+testing/logging/test_reporting.py
+src/_pytest/fixtures.py
+src/_pytest/config/__init__.py
+```
+2026-09-29 02:06:37,586 - INFO - ```
+src/_pytest/logging.py
+src/_pytest/fixtures.py
+src/_pytest/config/__init__.py
+testing/logging/test_fixture.py
+testing/logging/test_reporting.py
+```
+2026-09-29 02:06:39,522 - INFO - ```
+src/_pytest/logging.py
+src/_pytest/fixtures.py
+src/_pytest/config/__init__.py
+```

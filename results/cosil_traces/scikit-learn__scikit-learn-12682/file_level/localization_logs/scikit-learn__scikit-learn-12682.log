@@ -1,0 +1,26 @@
+2026-09-29 02:26:30,254 - INFO - Processing bug scikit-learn__scikit-learn-12682
+2026-09-29 02:26:30,254 - INFO - ================ localize scikit-learn__scikit-learn-12682 ================
+2026-09-29 02:26:33,324 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\n`SparseCoder` doesn't expose `max_iter` for `Lasso`\n`SparseCoder` uses `Lasso` if the algorithm is set to `lasso_cd`. It sets some of the `Lasso`'s parameters, but not `max_iter`, and that by default is 1000. This results in a warning in `examples/decomposition/plot_sparse_coding.py` complaining that the estimator has not converged.\r\n\r\nI guess there should be a way for the user to specify other parameters of the estimator used in `SparseCoder` other than the ones provided in the `SparseCoder.__init__` right now.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 02:26:33,324 - INFO - ================================================================================
+2026-09-29 02:26:36,240 - INFO - ```
+sklearn/decomposition/_dict_learning.py
+sklearn/decomposition/tests/test_dict_learning.py
+examples/decomposition/plot_sparse_coding.py
+sklearn/linear_model/_coordinate_descent.py
+sklearn/decomposition/__init__.py
+```
+2026-09-29 02:26:38,762 - INFO - ```text
+sklearn/decomposition/_dict_learning.py
+sklearn/decomposition/tests/test_dict_learning.py
+sklearn/decomposition/__init__.py
+sklearn/linear_model/_coordinate_descent.py
+examples/decomposition/plot_sparse_coding.py
+```
+2026-09-29 02:26:41,126 - INFO - ```text
+sklearn/decomposition/_dict_learning.py
+sklearn/linear_model/_coordinate_descent.py
+sklearn/decomposition/__init__.py
+examples/decomposition/plot_sparse_coding.py
+sklearn/decomposition/tests/test_dict_learning.py
+```

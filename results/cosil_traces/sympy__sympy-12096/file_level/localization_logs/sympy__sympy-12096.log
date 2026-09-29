@@ -1,0 +1,26 @@
+2026-09-29 05:00:03,618 - INFO - Processing bug sympy__sympy-12096
+2026-09-29 05:00:03,618 - INFO - ================ localize sympy__sympy-12096 ================
+2026-09-29 05:00:06,681 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nevalf does not call _imp_ recursively\nExample from https://stackoverflow.com/questions/41818842/why-cant-i-evaluate-a-composition-of-implemented-functions-in-sympy-at-a-point:\r\n\r\n```\r\n>>> from sympy.utilities.lambdify import implemented_function\r\n>>> f = implemented_function('f', lambda x: x ** 2)\r\n>>> g = implemented_function('g', lambda x: 2 * x)\r\n>>> print(f(  2 ).evalf())\r\n4.00000000000000\r\n>>> print(  g(2) .evalf())\r\n4.00000000000000\r\n>>> print(f(g(2)).evalf())\r\nf(g(2))\r\n```\r\n\r\nThe code for this is in `Function._eval_evalf`. It isn't calling evalf recursively on the return of `_imp_`. \n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 05:00:06,681 - INFO - ================================================================================
+2026-09-29 05:00:09,673 - INFO - ```
+sympy/core/function.py
+sympy/core/evalf.py
+sympy/utilities/lambdify.py
+sympy/core/expr.py
+sympy/core/basic.py
+```
+2026-09-29 05:00:12,592 - INFO - ```
+sympy/core/function.py
+sympy/core/evalf.py
+sympy/utilities/lambdify.py
+sympy/core/expr.py
+sympy/core/basic.py
+```
+2026-09-29 05:00:15,202 - INFO - ```
+sympy/core/function.py
+sympy/core/evalf.py
+sympy/core/expr.py
+sympy/utilities/lambdify.py
+sympy/core/basic.py
+```

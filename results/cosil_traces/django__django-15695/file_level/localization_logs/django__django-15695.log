@@ -1,0 +1,25 @@
+2026-09-28 20:50:32,409 - INFO - Processing bug django__django-15695
+2026-09-28 20:50:32,409 - INFO - ================ localize django__django-15695 ================
+2026-09-28 20:50:35,501 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nRenameIndex() crashes when unnamed index is moving backward and forward.\nDescription\n\t\nRenameIndex() should restore the old auto-generated name when an unnamed index for unique_together is moving backward. Now re-applying RenameIndex() crashes. For example:\ntests/migrations/test_operations.py\ndiff --git a/tests/migrations/test_operations.py b/tests/migrations/test_operations.py\nindex cfd28b1b39..c0a55023bb 100644\n\t\t\t\t\t\n\t\t\t\t\t a\n\t\t\t\t \n\t\t\t\t\t\n\t\t\t\t\t b\n\t\t\t\t \n class OperationTests(OperationTestBase):\xa0\n29882988\xa0 \xa0 \xa0 \xa0 with connection.schema_editor() as editor, self.assertNumQueries(0):\n29892989\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 operation.database_backwards(app_label, editor, new_state, project_state)\n29902990\xa0 \xa0 \xa0 \xa0 self.assertIndexNameExists(table_name, "new_pony_test_idx")\n\xa02991\xa0 \xa0 \xa0 \xa0 # Re-apply renaming.\n\xa02992\xa0 \xa0 \xa0 \xa0 with connection.schema_editor() as editor:\n\xa02993\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 operation.database_forwards(app_label, editor, project_state, new_state)\n\xa02994\xa0 \xa0 \xa0 \xa0 self.assertIndexNameExists(table_name, "new_pony_test_idx")\n29912995\xa0 \xa0 \xa0 \xa0 # Deconstruction.\n29922996\xa0 \xa0 \xa0 \xa0 definition = operation.deconstruct()\n29932997\xa0 \xa0 \xa0 \xa0 self.assertEqual(definition[0], "RenameIndex")\ncrashes on PostgreSQL:\ndjango.db.utils.ProgrammingError: relation "new_pony_test_idx" already exists\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 20:50:35,501 - INFO - ================================================================================
+2026-09-28 20:50:39,257 - INFO - ```
+django/db/migrations/operations/models.py
+django/db/backends/base/schema.py
+django/db/backends/postgresql/schema.py
+django/db/migrations/state.py
+tests/migrations/test_operations.py
+```
+2026-09-28 20:50:41,921 - INFO - ```
+django/db/migrations/operations/models.py
+django/db/backends/base/schema.py
+django/db/backends/postgresql/schema.py
+django/db/migrations/state.py
+tests/migrations/test_operations.py
+```
+2026-09-28 20:50:44,305 - INFO - ```
+django/db/migrations/operations/models.py
+django/db/backends/base/schema.py
+django/db/backends/postgresql/schema.py
+django/db/migrations/state.py
+```

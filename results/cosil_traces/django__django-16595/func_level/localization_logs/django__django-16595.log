@@ -1,0 +1,228 @@
+2026-09-28 21:56:44,728 - INFO - Processing bug django__django-16595
+2026-09-28 21:56:44,728 - INFO - ================ localize django__django-16595 ================
+2026-09-28 21:56:47,912 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 21:56:52,036 - INFO - [round 0] tokens=1378 tool_calls=3 content=''
+2026-09-28 21:56:52,036 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:56:52,036 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AlterField'}
+2026-09-28 21:56:55,082 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:56:55,083 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:56:55,083 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:56:55,083 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:56:55,083 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:56:55,083 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:56:57,125 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:56:57,126 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:56:59,431 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AlterField'}: False
+2026-09-28 21:56:59,432 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:56:59,432 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField"}
+2026-09-28 21:56:59,432 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AddField'}
+2026-09-28 21:57:01,903 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:01,903 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:01,904 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:01,904 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:05,041 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:05,042 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:05,042 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/models.py", "class_name": "AlterField"}
+2026-09-28 21:57:05,042 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:05,042 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "Optimizer"}
+2026-09-28 21:57:05,042 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:08,014 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name": "django/db/migrations/optimizer.py", "func_name": "optimize"}
+2026-09-28 21:57:08,015 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:57:08,015 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name": "django/db/migrations/operations/fields.py", "func_name": "AlterField"}
+2026-09-28 21:57:08,015 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:57:08,015 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name": "django/db/migrations/operations/fields.py", "func_name": "reduce"}
+2026-09-28 21:57:08,015 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 21:57:11,243 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AddField'}: False
+2026-09-28 21:57:11,244 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:57:11,244 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:11,244 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/migrations/optimizer.py', 'class_name': 'MigrationOptimizer'}
+2026-09-28 21:57:13,908 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:13,908 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:13,908 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:13,908 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:13,909 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField"}
+2026-09-28 21:57:13,909 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:16,227 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:57:16,228 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:57:18,498 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/migrations/optimizer.py', 'class_name': 'MigrationOptimizer'}: False
+2026-09-28 21:57:18,499 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:57:21,294 - INFO - [round 1] tokens=1589 tool_calls=3 content=''
+2026-09-28 21:57:21,294 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/base.py", "class_name": "Operation"}
+2026-09-28 21:57:21,295 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/migrations/operations/base.py', 'class_name': 'Operation'}
+2026-09-28 21:57:24,391 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:24,392 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:24,392 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:24,392 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:24,392 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/base.py", "class_name": "Operation"}
+2026-09-28 21:57:24,392 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:27,114 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:27,115 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:27,115 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField"}
+2026-09-28 21:57:27,115 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:27,115 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:27,115 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:33,515 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/migrations/operations/base.py', 'class_name': 'Operation'}: False
+2026-09-28 21:57:33,515 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:57:33,515 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation", "func_name": "reduce"}
+2026-09-28 21:57:33,516 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'FieldOperation', 'func_name': 'reduce'}
+2026-09-28 21:57:36,527 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:36,528 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:36,528 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:36,528 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:36,528 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:36,528 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:39,270 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:57:39,271 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:57:41,602 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'FieldOperation', 'func_name': 'reduce'}: False
+2026-09-28 21:57:41,603 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:57:41,603 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation", "func_name": "is_same_field_operation"}
+2026-09-28 21:57:41,603 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'FieldOperation', 'func_name': 'is_same_field_operation'}
+2026-09-28 21:57:43,974 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:43,975 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:43,975 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:43,975 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:43,975 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer", "func_name": "optimize"}
+2026-09-28 21:57:43,975 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 21:57:47,833 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/models.py", "class_name": "AlterField"}
+2026-09-28 21:57:47,834 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:47,834 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/base.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:47,834 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:47,834 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:57:47,834 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:50,006 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 21:57:50,007 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:57:52,248 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'FieldOperation', 'func_name': 'is_same_field_operation'}: False
+2026-09-28 21:57:52,249 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:57:55,839 - INFO - [round 2] tokens=1805 tool_calls=3 content=''
+2026-09-28 21:57:55,840 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField", "func_name": "reduce"}
+2026-09-28 21:57:55,840 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AlterField', 'func_name': 'reduce'}
+2026-09-28 21:57:58,219 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:57:58,220 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:57:58,220 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:57:58,220 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:06,405 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:58:06,406 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:58:08,739 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AlterField', 'func_name': 'reduce'}: False
+2026-09-28 21:58:08,740 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:58:08,740 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField", "func_name": "reduce"}
+2026-09-28 21:58:08,740 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AddField', 'func_name': 'reduce'}
+2026-09-28 21:58:11,412 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:58:11,413 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:11,413 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField"}
+2026-09-28 21:58:11,413 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:13,509 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:58:13,510 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:58:16,219 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/migrations/operations/fields.py', 'class_name': 'AddField', 'func_name': 'reduce'}: ```False```
+2026-09-28 21:58:16,220 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:58:16,220 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer", "func_name": "optimize_inner"}
+2026-09-28 21:58:16,220 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/migrations/optimizer.py', 'class_name': 'MigrationOptimizer', 'func_name': 'optimize_inner'}
+2026-09-28 21:58:19,689 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:58:19,690 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:19,690 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:58:19,690 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:19,690 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AddField"}
+2026-09-28 21:58:19,690 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:22,492 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:58:22,492 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:58:25,088 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/migrations/optimizer.py', 'class_name': 'MigrationOptimizer', 'func_name': 'optimize_inner'}: False
+2026-09-28 21:58:25,089 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:58:27,573 - INFO - [round 3] tokens=1903 tool_calls=1 content=''
+2026-09-28 21:58:27,574 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 21:58:27,574 - INFO -   [prune] start for exit args={}
+2026-09-28 21:58:30,877 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "AlterField"}
+2026-09-28 21:58:30,878 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:30,878 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/optimizer.py", "class_name": "MigrationOptimizer"}
+2026-09-28 21:58:30,878 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:30,878 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/migrations/operations/fields.py", "class_name": "FieldOperation"}
+2026-09-28 21:58:30,878 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 21:58:33,499 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 21:58:33,500 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 21:58:35,933 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 21:58:35,934 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 21:58:35,934 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 21:58:35,934 - INFO - ==== tool-call loop end ====
+2026-09-28 21:58:39,436 - INFO - <locations>
+  <location>
+    <file>django/db/migrations/operations/fields.py</file>
+    <type>function</type>
+    <name>AlterField.reduce</name>
+  </location>
+  <location>
+    <file>django/db/migrations/optimizer.py</file>
+    <type>function</type>
+    <name>MigrationOptimizer.optimize</name>
+  </location>
+  <location>
+    <file>django/db/migrations/operations/fields.py</file>
+    <type>function</type>
+    <name>FieldOperation.is_same_field_operation</name>
+  </location>
+  <location>
+    <file>django/db/migrations/operations/fields.py</file>
+    <type>class</type>
+    <name>AlterField</name>
+  </location>
+  <location>
+    <file>django/db/migrations/operations/base.py</file>
+    <type>function</type>
+    <name>Operation.reduce</name>
+  </location>
+</locations>
+2026-09-28 21:58:39,437 - INFO - parsed locations: {'django/db/migrations/operations/fields.py': ['function: AlterField.reduce\nfunction: FieldOperation.is_same_field_operation\nclass: AlterField'], 'django/db/migrations/optimizer.py': ['function: MigrationOptimizer.optimize'], 'django/db/migrations/operations/base.py': ['function: Operation.reduce']}

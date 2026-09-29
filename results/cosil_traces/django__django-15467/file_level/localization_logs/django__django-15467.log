@@ -1,0 +1,26 @@
+2026-09-28 20:28:22,148 - INFO - Processing bug django__django-15467
+2026-09-28 20:28:22,148 - INFO - ================ localize django__django-15467 ================
+2026-09-28 20:28:25,253 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nModelAdmin with defined radio_fields override empty_label\nDescription\n\t\nModelAdmin drops my "empty_label" and set "default_empty_label". For example:\nclass MyModelAdmin(ModelAdmin):\n\tradio_fields = \'myfield\',\n\tdef formfield_for_foreignkey(self, db_field, *args, **kwargs):\n\t\tif db_field.name == \'myfield\':\n\t\t\tkwargs[\'empty_label\'] = "I WANT TO SET MY OWN EMPTY LABEL"\n\t\treturn super().formfield_for_foreignkey(db_field, *args, **kwargs)\nYou get never the "I WANT TO SET MY OWN EMPTY LABEL"\nHow to fix it:\nIn django\\contrib\\admin\\options.py, row 234:\nkwargs[\'empty_label\'] = _(\'None\') if db_field.blank else None\nShould be changed on:\nkwargs[\'empty_label\'] = (kwargs.get(\'empty_label\') or _(\'None\')) if db_field.blank else None\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 20:28:25,253 - INFO - ================================================================================
+2026-09-28 20:28:28,172 - INFO - ```
+django/contrib/admin/options.py
+django/contrib/admin/helpers.py
+django/contrib/admin/widgets.py
+django/forms/models.py
+django/contrib/admin/sites.py
+```
+2026-09-28 20:28:30,507 - INFO - ```
+django/contrib/admin/options.py
+django/contrib/admin/helpers.py
+django/contrib/admin/widgets.py
+django/contrib/admin/sites.py
+django/forms/models.py
+```
+2026-09-28 20:28:33,636 - INFO - ```
+django/contrib/admin/options.py
+django/forms/models.py
+django/contrib/admin/widgets.py
+django/contrib/admin/helpers.py
+django/contrib/admin/sites.py
+```

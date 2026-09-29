@@ -1,0 +1,26 @@
+2026-09-29 05:52:28,882 - INFO - Processing bug sympy__sympy-14976
+2026-09-29 05:52:28,883 - INFO - ================ localize sympy__sympy-14976 ================
+2026-09-29 05:52:31,880 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nlambdify(modules='mpmath') doesn't wrap rationals\n```py\r\n>>> eqn = Eq(rf(18,x), 77 + S(1)/3)\r\n>>> f = lambdify(x, eqn.lhs - eqn.rhs, 'mpmath')\r\n>>> print(inspect.getsource(f))\r\ndef _lambdifygenerated(x):\r\n    return (  # Not supported in Python:\r\n  # RisingFactorial\r\nRisingFactorial(18, x) - 232/3)\r\n```\r\n\r\nThis results in reduced precision results from `nsolve`, because the 232/3 isn't evaluated at full precision. \r\n\r\n```py\r\n>>> eqn = Eq(rf(18,x), 77 + S(1)/3)\r\n>>> x0 = nsolve(eqn, Float('1.5', 64), prec=64)\r\n>>> rf(18, x0).evalf(64)\r\n77.33333333333332859638176159933209419250488281250000000000000000\r\n```\r\n\r\nOriginally reported at https://github.com/sympy/sympy/pull/14971\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 05:52:31,880 - INFO - ================================================================================
+2026-09-29 05:52:34,862 - INFO - ```
+sympy/utilities/lambdify.py
+sympy/printing/pycode.py
+sympy/printing/codeprinter.py
+sympy/printing/lambdarepr.py
+sympy/solvers/solvers.py
+```
+2026-09-29 05:52:37,289 - INFO - ```
+sympy/utilities/lambdify.py
+sympy/printing/lambdarepr.py
+sympy/printing/pycode.py
+sympy/printing/codeprinter.py
+sympy/solvers/solvers.py
+```
+2026-09-29 05:52:39,716 - INFO - ```text
+sympy/utilities/lambdify.py
+sympy/printing/lambdarepr.py
+sympy/printing/pycode.py
+sympy/printing/codeprinter.py
+sympy/solvers/solvers.py
+```

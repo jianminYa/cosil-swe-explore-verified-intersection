@@ -1,0 +1,26 @@
+2026-09-29 01:10:01,047 - INFO - Processing bug pylint-dev__pylint-4604
+2026-09-29 01:10:01,047 - INFO - ================ localize pylint-dev__pylint-4604 ================
+2026-09-29 01:10:04,091 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nunused-import false positive for a module used in a type comment\n### Steps to reproduce\r\n\r\n```python\r\n"""Docstring."""\r\n\r\nimport abc\r\nfrom abc import ABC\r\n\r\nX = ...  # type: abc.ABC\r\nY = ...  # type: ABC\r\n```\r\n\r\n### Current behavior\r\n\r\n```\r\n************* Module a\r\n/tmp/a.py:3:0: W0611: Unused import abc (unused-import)\r\n\r\n-----------------------------------\r\nYour code has been rated at 7.50/10\r\n```\r\n\r\n### Expected behavior\r\n\r\n`unused-import` should not be emitted.\r\n\r\n### pylint --version output\r\n\r\nResult of `pylint --version` output:\r\n\r\n```\r\npylint 2.8.3\r\nastroid 2.5.6\r\nPython 3.9.2 (default, Feb 28 2021, 17:03:44) \r\n[GCC 10.2.1 20210110]\r\n```\r\n\r\nThis is a follow up to #3112.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-29 01:10:04,091 - INFO - ================================================================================
+2026-09-29 01:10:07,911 - INFO - ```
+pylint/checkers/variables.py
+pylint/checkers/typecheck.py
+pylint/checkers/utils.py
+pylint/extensions/typing.py
+astroid/nodes/node_classes.py
+```
+2026-09-29 01:10:10,018 - INFO - ```
+pylint/checkers/variables.py
+pylint/checkers/typecheck.py
+pylint/checkers/utils.py
+pylint/extensions/typing.py
+astroid/nodes/node_classes.py
+```
+2026-09-29 01:10:13,246 - INFO - ```
+pylint/checkers/variables.py
+pylint/checkers/utils.py
+astroid/nodes/node_classes.py
+pylint/checkers/typecheck.py
+pylint/extensions/typing.py
+```

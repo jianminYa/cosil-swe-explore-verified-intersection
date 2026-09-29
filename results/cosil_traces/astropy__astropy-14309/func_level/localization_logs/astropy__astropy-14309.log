@@ -1,0 +1,222 @@
+2026-09-28 13:16:34,636 - INFO - Processing bug astropy__astropy-14309
+2026-09-28 13:16:34,636 - INFO - ================ localize astropy__astropy-14309 ================
+2026-09-28 13:16:37,834 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 13:16:43,165 - INFO - [round 0] tokens=2312 tool_calls=3 content=''
+2026-09-28 13:16:43,165 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:16:43,166 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'is_fits'}
+2026-09-28 13:16:46,284 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "astropy/io/fits/connect.py", "class_name": "TableRead"}
+2026-09-28 13:16:46,285 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 13:16:46,285 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase"}
+2026-09-28 13:16:46,285 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 13:16:46,285 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:16:46,286 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:16:49,725 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:16:49,726 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:16:52,356 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'is_fits'}: False
+2026-09-28 13:16:52,357 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:16:52,357 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:16:52,357 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'astropy/io/registry/base.py', 'class_name': '_UnifiedIORegistryBase', 'func_name': 'identify_format'}
+2026-09-28 13:16:55,825 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase"}
+2026-09-28 13:16:55,827 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 13:16:55,827 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:16:55,827 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:16:55,827 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:16:55,827 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:16:58,616 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:16:58,617 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:01,388 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'astropy/io/registry/base.py', 'class_name': '_UnifiedIORegistryBase', 'func_name': 'identify_format'}: False
+2026-09-28 13:17:01,389 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:01,389 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:17:01,389 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/registry/compat.py', 'func_name': '_make_io_func'}
+2026-09-28 13:17:05,396 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:05,397 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:05,397 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:05,398 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:05,398 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "astropy/io/registry/compat.py", "class_name": "_make_io_func"}
+2026-09-28 13:17:05,398 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 13:17:08,472 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:08,473 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:08,473 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/fits/connect.py", "class_name": "", "func_name": "is_fits"}
+2026-09-28 13:17:08,474 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:08,474 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "identify_format"}
+2026-09-28 13:17:08,474 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:11,049 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 13:17:11,050 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:13,639 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/registry/compat.py', 'func_name': '_make_io_func'}: False
+2026-09-28 13:17:13,640 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:16,980 - INFO - [round 1] tokens=2513 tool_calls=3 content=''
+2026-09-28 13:17:16,981 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/ascii/connect.py", "func_name": "io_identify"}
+2026-09-28 13:17:16,982 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/ascii/connect.py', 'func_name': 'io_identify'}
+2026-09-28 13:17:20,046 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/base.py", "func_name": "identify_format"}
+2026-09-28 13:17:20,047 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:20,047 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:20,047 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:20,047 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:17:20,047 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:24,361 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:24,362 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:24,362 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/fits/connect.py", "class_name": "", "func_name": "is_fits"}
+2026-09-28 13:17:24,362 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:24,362 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:24,362 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:26,440 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 13:17:26,441 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:28,785 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/ascii/connect.py', 'func_name': 'io_identify'}: False
+2026-09-28 13:17:28,785 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:28,786 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/misc/connect.py", "func_name": "is_hdf5"}
+2026-09-28 13:17:28,786 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/misc/connect.py', 'func_name': 'is_hdf5'}
+2026-09-28 13:17:32,336 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:32,337 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:32,337 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:32,337 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:32,337 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:17:32,337 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:34,597 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:17:34,598 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:36,862 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/misc/connect.py', 'func_name': 'is_hdf5'}: False
+2026-09-28 13:17:36,862 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:36,863 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/votable/connect.py", "func_name": "is_votable"}
+2026-09-28 13:17:36,863 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/votable/connect.py', 'func_name': 'is_votable'}
+2026-09-28 13:17:39,570 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:39,571 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:39,571 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:39,571 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:42,891 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:17:42,892 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:45,376 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/votable/connect.py', 'func_name': 'is_votable'}: False
+2026-09-28 13:17:45,376 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:48,670 - INFO - [round 2] tokens=2713 tool_calls=3 content=''
+2026-09-28 13:17:48,671 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "read_table_fits"}
+2026-09-28 13:17:48,671 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'read_table_fits'}
+2026-09-28 13:17:52,232 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:17:52,232 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:52,233 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:17:52,233 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:17:52,233 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:17:52,233 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:17:54,739 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:17:54,740 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:17:57,254 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'read_table_fits'}: False
+2026-09-28 13:17:57,254 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:17:57,254 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "write_table_fits"}
+2026-09-28 13:17:57,254 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'write_table_fits'}
+2026-09-28 13:18:00,107 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:18:00,108 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:00,108 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:18:00,108 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:18:00,108 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:18:00,108 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:02,181 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:18:02,181 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:18:05,644 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'write_table_fits'}: False
+2026-09-28 13:18:05,645 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:18:05,645 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "fits_connect"}
+2026-09-28 13:18:05,645 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'fits_connect'}
+2026-09-28 13:18:09,097 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:18:09,098 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:09,098 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:18:09,098 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:18:09,098 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/registry/compat.py", "func_name": "_make_io_func"}
+2026-09-28 13:18:09,098 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:11,405 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 13:18:11,405 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 13:18:14,346 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'astropy/io/fits/connect.py', 'func_name': 'fits_connect'}: False
+2026-09-28 13:18:14,347 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:18:17,371 - INFO - [round 3] tokens=2810 tool_calls=1 content=''
+2026-09-28 13:18:17,372 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 13:18:17,372 - INFO -   [prune] start for exit args={}
+2026-09-28 13:18:21,660 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "astropy/io/fits/connect.py", "func_name": "is_fits"}
+2026-09-28 13:18:21,661 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:21,661 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "astropy/io/registry/base.py", "class_name": "_UnifiedIORegistryBase", "func_name": "identify_format"}
+2026-09-28 13:18:21,661 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:18:24,896 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"astropy/io/fits/connect.py","func_name":"is_fits"}
+2026-09-28 13:18:24,897 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 13:18:28,349 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name":"astropy/io/registry/base.py","class_name":"_UnifiedIORegistryBase","func_name":"identify_format"}
+2026-09-28 13:18:28,350 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 13:18:31,083 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 13:18:31,084 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 13:18:31,084 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 13:18:31,084 - INFO - ==== tool-call loop end ====
+2026-09-28 13:18:34,618 - INFO - <locations>
+  <location>
+    <file>astropy/io/fits/connect.py</file>
+    <type>function</type>
+    <name>is_fits</name>
+  </location>
+  <location>
+    <file>astropy/io/registry/base.py</file>
+    <type>function</type>
+    <name>_UnifiedIORegistryBase.identify_format</name>
+  </location>
+  <location>
+    <file>astropy/io/registry/compat.py</file>
+    <type>function</type>
+    <name>_make_io_func.wrapper</name>
+  </location>
+  <location>
+    <file>astropy/io/fits/connect.py</file>
+    <type>function</type>
+    <name>fits_identify</name>
+  </location>
+  <location>
+    <file>astropy/io/registry/base.py</file>
+    <type>class</type>
+    <name>_UnifiedIORegistryBase</name>
+  </location>
+</locations>
+2026-09-28 13:18:34,619 - INFO - parsed locations: {'astropy/io/fits/connect.py': ['function: is_fits\nfunction: fits_identify'], 'astropy/io/registry/base.py': ['function: _UnifiedIORegistryBase.identify_format\nclass: _UnifiedIORegistryBase'], 'astropy/io/registry/compat.py': ['function: _make_io_func.wrapper']}

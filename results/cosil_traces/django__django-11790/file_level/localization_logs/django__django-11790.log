@@ -1,0 +1,25 @@
+2026-09-28 15:29:13,424 - INFO - Processing bug django__django-11790
+2026-09-28 15:29:13,425 - INFO - ================ localize django__django-11790 ================
+2026-09-28 15:29:16,550 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nAuthenticationForm's username field doesn't set maxlength HTML attribute.\nDescription\n\t\nAuthenticationForm's username field doesn't render with maxlength HTML attribute anymore.\nRegression introduced in #27515 and 5ceaf14686ce626404afb6a5fbd3d8286410bf13.\n\u200bhttps://groups.google.com/forum/?utm_source=digest&utm_medium=email#!topic/django-developers/qnfSqro0DlA\n\u200bhttps://forum.djangoproject.com/t/possible-authenticationform-max-length-regression-in-django-2-1/241\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-28 15:29:16,550 - INFO - ================================================================================
+2026-09-28 15:29:20,010 - INFO - ```
+django/contrib/auth/forms.py
+django/forms/models.py
+django/forms/fields.py
+django/forms/widgets.py
+tests/auth_tests/test_forms.py
+```
+2026-09-28 15:29:22,769 - INFO - ```
+django/contrib/auth/forms.py
+tests/auth_tests/test_forms.py
+django/forms/models.py
+django/forms/fields.py
+django/forms/widgets.py
+```
+2026-09-28 15:29:25,669 - INFO - ```
+django/contrib/auth/forms.py
+django/forms/fields.py
+django/forms/widgets.py
+django/forms/models.py
+```

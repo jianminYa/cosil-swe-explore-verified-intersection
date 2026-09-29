@@ -1,0 +1,26 @@
+2026-09-29 06:03:30,272 - INFO - Processing bug sympy__sympy-15875
+2026-09-29 06:03:30,272 - INFO - ================ localize sympy__sympy-15875 ================
+2026-09-29 06:03:33,404 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nis_zero is incorrect on complex integer\n`is_zero` should return `None` if it cannot decide, but should never give the wrong answer. However:\r\n\r\n```\r\n>>> e = -2*I + (1 + I)**2\r\n>>> e.is_zero\r\nFalse\r\n>>> simplify(e).is_zero\r\nTrue\r\n```\r\n\r\nThis is causing errors in determining the rank of a matrix. See issue #15872 \nFixing is_zero for complex numbers while Add\nReferences to other Issues or PRs\r\n#15873 \r\n\r\nOther comments:\r\n\r\n<!-- BEGIN RELEASE NOTES -->\r\n\r\n- core\r\n  - Fix `is_zero` becoming `False` on some expressions with `Add`.\r\n\r\n<!-- END RELEASE NOTES -->\r\n\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 06:03:33,404 - INFO - ================================================================================
+2026-09-29 06:03:37,320 - INFO - ```
+sympy/core/add.py
+sympy/core/expr.py
+sympy/core/assumptions.py
+sympy/core/basic.py
+sympy/matrices/common.py
+```
+2026-09-29 06:03:39,756 - INFO - ```
+sympy/core/add.py
+sympy/core/expr.py
+sympy/core/assumptions.py
+sympy/core/basic.py
+sympy/matrices/common.py
+```
+2026-09-29 06:03:42,235 - INFO - ```
+sympy/core/add.py
+sympy/core/expr.py
+sympy/core/assumptions.py
+sympy/matrices/common.py
+sympy/core/basic.py
+```

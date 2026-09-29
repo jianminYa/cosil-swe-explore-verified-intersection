@@ -1,0 +1,213 @@
+2026-09-29 02:45:29,929 - INFO - Processing bug scikit-learn__scikit-learn-13779
+2026-09-29 02:45:29,929 - INFO - ================ localize scikit-learn__scikit-learn-13779 ================
+2026-09-29 02:45:33,157 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-29 02:45:36,957 - INFO - [round 0] tokens=1177 tool_calls=3 content=''
+2026-09-29 02:45:36,957 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier", "func_name": "fit"}
+2026-09-29 02:45:36,957 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': 'VotingClassifier', 'func_name': 'fit'}
+2026-09-29 02:45:39,516 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:45:39,517 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:39,517 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:45:39,517 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:41,931 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:45:41,932 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:45:43,972 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': 'VotingClassifier', 'func_name': 'fit'}: ```False```
+2026-09-29 02:45:43,972 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:45:43,973 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting", "func_name": "fit"}
+2026-09-29 02:45:43,973 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': '_BaseVoting', 'func_name': 'fit'}
+2026-09-29 02:45:47,214 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:45:47,215 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:47,215 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:45:47,215 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:47,215 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingRegressor"}
+2026-09-29 02:45:47,215 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:49,884 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"sklearn/ensemble/_voting.py","func_name":"_fit_single_estimator"}
+2026-09-29 02:45:49,885 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 02:45:52,576 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 02:45:52,577 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:45:54,962 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': '_BaseVoting', 'func_name': 'fit'}: False
+2026-09-29 02:45:54,963 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:45:54,963 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble", "func_name": "_validate_estimators"}
+2026-09-29 02:45:54,964 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': '_validate_estimators'}
+2026-09-29 02:45:57,657 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:45:57,658 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:57,658 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:45:57,658 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:45:57,658 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:45:57,658 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:00,847 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:46:00,848 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:46:03,196 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': '_validate_estimators'}: ```False```
+2026-09-29 02:46:03,197 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:06,277 - INFO - [round 1] tokens=1377 tool_calls=3 content=''
+2026-09-29 02:46:06,278 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:06,278 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': 'VotingClassifier'}
+2026-09-29 02:46:09,389 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:46:09,390 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:09,390 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:09,390 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:09,390 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:09,390 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:12,494 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:46:12,495 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:46:14,720 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': 'VotingClassifier'}: False
+2026-09-29 02:46:14,721 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:14,721 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:46:14,721 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': '_BaseVoting'}
+2026-09-29 02:46:17,192 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:17,193 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:17,193 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingRegressor"}
+2026-09-29 02:46:17,193 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:20,377 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"sklearn/ensemble/_voting.py","func_name":"_fit_single_estimator"}
+2026-09-29 02:46:20,378 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 02:46:22,754 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 02:46:22,755 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:46:25,087 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/ensemble/_voting.py', 'class_name': '_BaseVoting'}: ```False```
+2026-09-29 02:46:25,088 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:25,088 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:25,088 - INFO -   [prune] start for get_code_of_class args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble'}
+2026-09-29 02:46:28,011 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:28,012 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:28,012 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:28,013 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:30,504 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:30,505 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:30,505 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:30,505 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:32,786 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier", "func_name": "fit"}
+2026-09-29 02:46:32,786 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 02:46:32,787 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseComposition", "func_name": "_validate_estimators"}
+2026-09-29 02:46:32,787 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 02:46:34,947 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble'}: ```False```
+2026-09-29 02:46:34,948 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:38,020 - INFO - [round 2] tokens=1597 tool_calls=3 content=''
+2026-09-29 02:46:38,021 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "sklearn/utils/validation.py", "func_name": "_check_fit_params"}
+2026-09-29 02:46:38,021 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'sklearn/utils/validation.py', 'func_name': '_check_fit_params'}
+2026-09-29 02:46:40,876 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:40,877 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:40,877 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:46:40,877 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:43,691 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"sklearn/ensemble/voting.py","func_name":"_check_fit_params"}
+2026-09-29 02:46:43,692 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 02:46:45,592 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"sklearn/ensemble/voting.py","class_name":"VotingClassifier"}
+2026-09-29 02:46:45,593 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:48,428 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'sklearn/utils/validation.py', 'func_name': '_check_fit_params'}: False
+2026-09-29 02:46:48,429 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:48,429 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble", "func_name": "_make_estimator"}
+2026-09-29 02:46:48,429 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': '_make_estimator'}
+2026-09-29 02:46:50,845 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:50,846 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:50,846 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:50,846 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:50,846 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:46:50,846 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:53,582 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:46:53,583 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:46:55,756 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': '_make_estimator'}: ```False```
+2026-09-29 02:46:55,756 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:46:55,757 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble", "func_name": "set_params"}
+2026-09-29 02:46:55,757 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': 'set_params'}
+2026-09-29 02:46:58,646 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:46:58,647 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:58,647 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:46:58,647 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:46:58,647 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:46:58,647 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:47:00,529 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:47:00,529 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:47:02,943 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'sklearn/ensemble/_base.py', 'class_name': '_BaseHeterogeneousEnsemble', 'func_name': 'set_params'}: ```False```
+2026-09-29 02:47:02,944 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:47:04,978 - INFO - [round 3] tokens=1695 tool_calls=1 content=''
+2026-09-29 02:47:04,979 - INFO - [round 3] [tool-call] exit args={}
+2026-09-29 02:47:04,979 - INFO -   [prune] start for exit args={}
+2026-09-29 02:47:07,750 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "_BaseVoting"}
+2026-09-29 02:47:07,751 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:47:07,751 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_voting.py", "class_name": "VotingClassifier"}
+2026-09-29 02:47:07,751 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:47:07,751 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "sklearn/ensemble/_base.py", "class_name": "_BaseHeterogeneousEnsemble"}
+2026-09-29 02:47:07,751 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 02:47:09,916 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 02:47:09,917 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 02:47:12,364 - INFO -   [prune] decision for exit args={}: ```False```
+2026-09-29 02:47:12,364 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 02:47:12,364 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-29 02:47:12,364 - INFO - ==== tool-call loop end ====
+2026-09-29 02:47:15,893 - INFO - <locations>
+  <location>
+    <file>sklearn/ensemble/_voting.py</file>
+    <type>function</type>
+    <name>VotingClassifier.fit</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_voting.py</file>
+    <type>function</type>
+    <name>_BaseVoting.fit</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_base.py</file>
+    <type>function</type>
+    <name>_BaseHeterogeneousEnsemble._validate_estimators</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_base.py</file>
+    <type>function</type>
+    <name>_fit_single_estimator</name>
+  </location>
+  <location>
+    <file>sklearn/ensemble/_voting.py</file>
+    <type>class</type>
+    <name>VotingClassifier</name>
+  </location>
+</locations>
+2026-09-29 02:47:15,894 - INFO - parsed locations: {'sklearn/ensemble/_voting.py': ['function: VotingClassifier.fit\nfunction: _BaseVoting.fit\nclass: VotingClassifier'], 'sklearn/ensemble/_base.py': ['function: _BaseHeterogeneousEnsemble._validate_estimators\nfunction: _fit_single_estimator']}

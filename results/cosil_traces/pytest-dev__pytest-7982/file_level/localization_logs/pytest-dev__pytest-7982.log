@@ -1,0 +1,24 @@
+2026-09-29 02:08:58,982 - INFO - Processing bug pytest-dev__pytest-7982
+2026-09-29 02:08:58,982 - INFO - ================ localize pytest-dev__pytest-7982 ================
+2026-09-29 02:09:02,043 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nSymlinked directories not collected since pytest 6.1.0\nWhen there is a symlink to a directory in a test directory, is is just skipped over, but it should be followed and collected as usual.\r\n\r\nThis regressed in b473e515bc57ff1133fe650f1e7e6d7e22e5d841 (included in 6.1.0). For some reason I added a `follow_symlinks=False` in there, I don't remember why, but it does not match the previous behavior and should be removed.\r\n\r\nPR for this is coming up.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-29 02:09:02,043 - INFO - ================================================================================
+2026-09-29 02:09:05,703 - INFO - ```
+src/_pytest/pathlib.py
+src/_pytest/main.py
+src/_pytest/python.py
+testing/test_collection.py
+testing/test_pathlib.py
+```
+2026-09-29 02:09:07,978 - INFO - ```text
+src/_pytest/main.py
+src/_pytest/python.py
+src/_pytest/pathlib.py
+testing/test_collection.py
+testing/test_pathlib.py
+```
+2026-09-29 02:09:10,756 - INFO - ```
+src/_pytest/pathlib.py
+src/_pytest/main.py
+src/_pytest/python.py
+```

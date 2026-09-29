@@ -1,0 +1,219 @@
+2026-09-28 15:11:22,202 - INFO - Processing bug django__django-11551
+2026-09-28 15:11:22,203 - INFO - ================ localize django__django-11551 ================
+2026-09-28 15:11:25,411 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 15:11:29,458 - INFO - [round 0] tokens=2305 tool_calls=3 content=''
+2026-09-28 15:11:29,458 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:11:29,458 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': '_check_list_display_item'}
+2026-09-28 15:11:32,785 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks"}
+2026-09-28 15:11:32,786 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:11:32,786 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:11:32,786 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:11:35,719 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/contrib/admin/checks.py","class_name":"ModelAdminChecks"}
+2026-09-28 15:11:35,720 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:11:38,224 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:11:38,225 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:11:41,215 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': '_check_list_display_item'}: False
+2026-09-28 15:11:41,215 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:11:41,216 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "_check_list_display"}
+2026-09-28 15:11:41,216 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': '_check_list_display'}
+2026-09-28 15:11:44,484 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks"}
+2026-09-28 15:11:44,485 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:11:44,485 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:11:44,485 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:11:47,809 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/contrib/admin/checks.py","class_name":"BaseModelAdminChecks"}
+2026-09-28 15:11:47,810 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:11:50,334 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:11:50,335 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:11:53,271 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': '_check_list_display'}: False
+2026-09-28 15:11:53,272 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:11:53,272 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/options.py", "func_name": "get_field"}
+2026-09-28 15:11:53,272 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/db/models/options.py', 'func_name': 'get_field'}
+2026-09-28 15:11:56,223 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:11:56,224 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:11:56,224 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/options.py", "class_name": "Options", "func_name": "get_field"}
+2026-09-28 15:11:56,224 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:11:59,685 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks"}
+2026-09-28 15:11:59,686 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:11:59,686 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/options.py", "class_name": "Options"}
+2026-09-28 15:11:59,686 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:01,902 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:12:01,903 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:12:05,055 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/db/models/options.py', 'func_name': 'get_field'}: False
+2026-09-28 15:12:05,056 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:12:08,444 - INFO - [round 1] tokens=2501 tool_calls=3 content=''
+2026-09-28 15:12:08,445 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks"}
+2026-09-28 15:12:08,445 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks'}
+2026-09-28 15:12:10,941 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:10,942 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:10,942 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks"}
+2026-09-28 15:12:10,942 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:13,177 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 15:12:13,178 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:12:15,687 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks'}: False
+2026-09-28 15:12:15,688 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:12:15,688 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 15:12:15,688 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin'}
+2026-09-28 15:12:19,042 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:19,043 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:12:19,043 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "_check_list_display"}
+2026-09-28 15:12:19,043 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:12:19,043 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "check"}
+2026-09-28 15:12:19,044 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:12:21,896 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:21,897 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:21,897 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display"}
+2026-09-28 15:12:21,897 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:24,029 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:12:24,030 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:12:26,004 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin'}: False
+2026-09-28 15:12:26,004 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:12:26,004 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ManyToManyField"}
+2026-09-28 15:12:26,005 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ManyToManyField'}
+2026-09-28 15:12:29,264 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:29,265 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:12:29,265 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/options.py", "class_name": "Options"}
+2026-09-28 15:12:29,265 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:32,326 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:32,327 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:32,327 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks"}
+2026-09-28 15:12:32,327 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:34,759 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:12:34,759 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:12:37,780 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ManyToManyField'}: False
+2026-09-28 15:12:37,780 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:12:41,049 - INFO - [round 2] tokens=2716 tool_calls=3 content=''
+2026-09-28 15:12:41,050 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "check"}
+2026-09-28 15:12:41,050 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'ModelAdminChecks', 'func_name': 'check'}
+2026-09-28 15:12:44,278 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks"}
+2026-09-28 15:12:44,279 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:44,279 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "check"}
+2026-09-28 15:12:44,279 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:46,709 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/contrib/admin/checks.py","class_name":"BaseModelAdminChecks"}
+2026-09-28 15:12:46,710 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:49,536 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:12:49,537 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:12:51,714 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'ModelAdminChecks', 'func_name': 'check'}: False
+2026-09-28 15:12:51,715 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:12:51,715 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "check"}
+2026-09-28 15:12:51,715 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': 'check'}
+2026-09-28 15:12:55,817 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks"}
+2026-09-28 15:12:55,818 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:12:55,818 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:55,818 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:12:59,056 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "check"}
+2026-09-28 15:12:59,057 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:12:59,057 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/checks.py", "func_name": "_check_list_display_item"}
+2026-09-28 15:12:59,057 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:13:01,649 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:13:01,650 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:13:03,806 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'BaseModelAdminChecks', 'func_name': 'check'}: False
+2026-09-28 15:13:03,807 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:13:03,807 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "InlineModelAdminChecks", "func_name": "check"}
+2026-09-28 15:13:03,807 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'InlineModelAdminChecks', 'func_name': 'check'}
+2026-09-28 15:13:06,497 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks"}
+2026-09-28 15:13:06,498 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:13:06,498 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks"}
+2026-09-28 15:13:06,498 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 15:13:09,435 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"django/contrib/admin/checks.py","func_name":"_check_list_display_item"}
+2026-09-28 15:13:09,436 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 15:13:12,258 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 15:13:12,259 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:13:15,142 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/checks.py', 'class_name': 'InlineModelAdminChecks', 'func_name': 'check'}: False
+2026-09-28 15:13:15,142 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:13:18,990 - INFO - [round 3] tokens=2814 tool_calls=1 content=''
+2026-09-28 15:13:18,993 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 15:13:18,993 - INFO -   [prune] start for exit args={}
+2026-09-28 15:13:21,899 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "_check_list_display_item"}
+2026-09-28 15:13:21,900 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:13:21,900 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "ModelAdminChecks", "func_name": "_check_list_display"}
+2026-09-28 15:13:21,900 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:13:21,900 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/checks.py", "class_name": "BaseModelAdminChecks", "func_name": "check"}
+2026-09-28 15:13:21,900 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 15:13:24,082 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 15:13:24,083 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 15:13:26,943 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 15:13:26,944 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 15:13:26,944 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 15:13:26,944 - INFO - ==== tool-call loop end ====
+2026-09-28 15:13:31,209 - INFO - <locations>
+  <location>
+    <file>django/contrib/admin/checks.py</file>
+    <type>function</type>
+    <name>BaseModelAdminChecks._check_list_display_item</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/checks.py</file>
+    <type>class</type>
+    <name>BaseModelAdminChecks</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/checks.py</file>
+    <type>function</type>
+    <name>BaseModelAdminChecks._check_list_display</name>
+  </location>
+  <location>
+    <file>django/db/models/options.py</file>
+    <type>function</type>
+    <name>Options.get_field</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/options.py</file>
+    <type>class</type>
+    <name>ModelAdmin</name>
+  </location>
+</locations>
+2026-09-28 15:13:31,210 - INFO - parsed locations: {'django/contrib/admin/checks.py': ['function: BaseModelAdminChecks._check_list_display_item\nclass: BaseModelAdminChecks\nfunction: BaseModelAdminChecks._check_list_display'], 'django/db/models/options.py': ['function: Options.get_field'], 'django/contrib/admin/options.py': ['class: ModelAdmin']}

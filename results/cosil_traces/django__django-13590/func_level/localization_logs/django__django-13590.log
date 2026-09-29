@@ -1,0 +1,215 @@
+2026-09-28 17:48:59,061 - INFO - Processing bug django__django-13590
+2026-09-28 17:48:59,061 - INFO - ================ localize django__django-13590 ================
+2026-09-28 17:49:02,295 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 17:49:06,229 - INFO - [round 0] tokens=1215 tool_calls=3 content=''
+2026-09-28 17:49:06,230 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:06,230 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'resolve_lookup_value'}
+2026-09-28 17:49:10,128 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 17:49:10,128 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:10,129 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:10,129 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:49:12,159 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:49:12,160 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:49:14,602 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'resolve_lookup_value'}: False
+2026-09-28 17:49:14,603 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:49:14,603 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_lookup"}
+2026-09-28 17:49:14,603 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'build_lookup'}
+2026-09-28 17:49:17,020 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 17:49:17,021 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:17,021 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:17,021 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:19,228 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:49:19,229 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:49:21,211 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'build_lookup'}: ```False```
+2026-09-28 17:49:21,212 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:49:21,212 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/lookups.py", "class_name": "Range", "func_name": "get_prep_lookup"}
+2026-09-28 17:49:21,212 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'Range', 'func_name': 'get_prep_lookup'}
+2026-09-28 17:49:23,703 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:23,704 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:23,704 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/lookups.py", "class_name": "Range"}
+2026-09-28 17:49:23,704 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:26,983 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:49:26,983 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:49:29,906 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'Range', 'func_name': 'get_prep_lookup'}: False
+2026-09-28 17:49:29,907 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:49:33,257 - INFO - [round 1] tokens=1465 tool_calls=4 content=''
+2026-09-28 17:49:33,257 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "solve_lookup_type"}
+2026-09-28 17:49:33,258 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'solve_lookup_type'}
+2026-09-28 17:49:35,821 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 17:49:35,821 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:35,821 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "solve_lookup_type"}
+2026-09-28 17:49:35,822 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:49:38,523 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:38,524 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:38,524 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_lookup"}
+2026-09-28 17:49:38,524 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:41,600 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:49:41,601 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:49:43,548 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'solve_lookup_type'}: False
+2026-09-28 17:49:43,549 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:49:43,549 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_filter"}
+2026-09-28 17:49:43,549 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'build_filter'}
+2026-09-28 17:49:46,238 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 17:49:46,239 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:46,239 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:46,240 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:49:48,491 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:49:48,492 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:49:51,285 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'build_filter'}: False
+2026-09-28 17:49:51,286 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:49:51,286 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/lookups.py", "class_name": "FieldGetDbPrepValueIterableMixin", "func_name": "batch_process_rhs"}
+2026-09-28 17:49:51,286 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'FieldGetDbPrepValueIterableMixin', 'func_name': 'batch_process_rhs'}
+2026-09-28 17:49:55,271 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:55,272 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:55,272 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/lookups.py", "class_name": "FieldGetDbPrepValueIterableMixin"}
+2026-09-28 17:49:55,272 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:49:58,089 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:49:58,090 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:49:58,090 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/lookups.py", "func_name": "batch_process_rhs"}
+2026-09-28 17:49:58,090 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:50:01,062 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:50:01,063 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:03,204 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'FieldGetDbPrepValueIterableMixin', 'func_name': 'batch_process_rhs'}: False
+2026-09-28 17:50:03,205 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:03,205 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/lookups.py", "class_name": "BuiltinLookup", "func_name": "process_rhs"}
+2026-09-28 17:50:03,205 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'BuiltinLookup', 'func_name': 'process_rhs'}
+2026-09-28 17:50:06,304 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:06,304 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:06,304 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/lookups.py", "class_name": "BuiltinLookup"}
+2026-09-28 17:50:06,305 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:50:09,782 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:09,783 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:09,783 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_lookup"}
+2026-09-28 17:50:09,784 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:12,122 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:50:12,123 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:14,900 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/lookups.py', 'class_name': 'BuiltinLookup', 'func_name': 'process_rhs'}: False
+2026-09-28 17:50:14,901 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:18,288 - INFO - [round 2] tokens=1699 tool_calls=3 content=''
+2026-09-28 17:50:18,289 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/expressions.py", "class_name": "BaseExpression", "func_name": "resolve_expression"}
+2026-09-28 17:50:18,289 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'BaseExpression', 'func_name': 'resolve_expression'}
+2026-09-28 17:50:21,185 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:21,186 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:21,186 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 17:50:21,186 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:50:24,460 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_lookup"}
+2026-09-28 17:50:24,461 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:24,461 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:24,461 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 17:50:27,258 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 17:50:27,259 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:29,502 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/expressions.py', 'class_name': 'BaseExpression', 'func_name': 'resolve_expression'}: False
+2026-09-28 17:50:29,503 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:29,503 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/where.py", "class_name": "WhereNode", "func_name": "add"}
+2026-09-28 17:50:29,503 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/where.py', 'class_name': 'WhereNode', 'func_name': 'add'}
+2026-09-28 17:50:32,051 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:32,052 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:32,052 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/where.py", "class_name": "WhereNode"}
+2026-09-28 17:50:32,053 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:50:35,226 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:50:35,227 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:38,121 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/where.py', 'class_name': 'WhereNode', 'func_name': 'add'}: False
+2026-09-28 17:50:38,122 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:38,122 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query_utils.py", "class_name": "Q", "func_name": "resolve_expression"}
+2026-09-28 17:50:38,122 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/query_utils.py', 'class_name': 'Q', 'func_name': 'resolve_expression'}
+2026-09-28 17:50:40,991 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:40,992 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:40,992 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query_utils.py", "class_name": "Q"}
+2026-09-28 17:50:40,992 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 17:50:42,800 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:50:42,801 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:45,519 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/query_utils.py', 'class_name': 'Q', 'func_name': 'resolve_expression'}: False
+2026-09-28 17:50:45,520 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:48,007 - INFO - [round 3] tokens=1797 tool_calls=1 content=''
+2026-09-28 17:50:48,008 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 17:50:48,008 - INFO -   [prune] start for exit args={}
+2026-09-28 17:50:51,264 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "resolve_lookup_value"}
+2026-09-28 17:50:51,265 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:51,265 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "build_lookup"}
+2026-09-28 17:50:51,265 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 17:50:53,510 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 17:50:53,511 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 17:50:56,028 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 17:50:56,029 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 17:50:56,029 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 17:50:56,029 - INFO - ==== tool-call loop end ====
+2026-09-28 17:50:59,111 - INFO - <locations>
+  <location>
+    <file>django/db/models/sql/query.py</file>
+    <type>function</type>
+    <name>Query.resolve_lookup_value</name>
+  </location>
+  <location>
+    <file>django/db/models/lookups.py</file>
+    <type>class</type>
+    <name>Range</name>
+  </location>
+  <location>
+    <file>django/db/models/lookups.py</file>
+    <type>function</type>
+    <name>FieldGetDbPrepValueIterableMixin.batch_process_rhs</name>
+  </location>
+  <location>
+    <file>django/db/models/sql/query.py</file>
+    <type>function</type>
+    <name>Query.build_lookup</name>
+  </location>
+  <location>
+    <file>django/db/models/query_utils.py</file>
+    <type>function</type>
+    <name>RegisterLookupMixin.get_lookup</name>
+  </location>
+</locations>
+2026-09-28 17:50:59,112 - INFO - parsed locations: {'django/db/models/sql/query.py': ['function: Query.resolve_lookup_value\nfunction: Query.build_lookup'], 'django/db/models/lookups.py': ['class: Range\nfunction: FieldGetDbPrepValueIterableMixin.batch_process_rhs'], 'django/db/models/query_utils.py': ['function: RegisterLookupMixin.get_lookup']}

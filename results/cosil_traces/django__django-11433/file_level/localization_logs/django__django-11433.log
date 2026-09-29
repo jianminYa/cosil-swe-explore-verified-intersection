@@ -1,0 +1,26 @@
+2026-09-28 14:57:08,431 - INFO - Processing bug django__django-11433
+2026-09-28 14:57:08,431 - INFO - ================ localize django__django-11433 ================
+2026-09-28 14:57:12,736 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nAllow `cleaned_data` to overwrite fields' default values.\nDescription\n\t\nSee comments here: \u200bhttps://github.com/django/django/pull/7068/files#r289432409\nCurrently, when submitting a form, if 'some_field' isn't in the data payload (e.g. it wasn't included in the form, perhaps because its value is derived from another field), and 'some_field' has a default value on the model, it cannot be overwritten with 'self.cleaned_data'.\nThis does not really follow the paradigm of modifying data in 'cleaned_data'. It requires the user to copy and overwrite the raw data submitted with the form.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-28 14:57:12,736 - INFO - ================================================================================
+2026-09-28 14:57:16,888 - INFO - ```
+django/forms/models.py
+django/db/models/fields/__init__.py
+django/forms/forms.py
+django/forms/boundfield.py
+tests/model_forms/tests.py
+```
+2026-09-28 14:57:19,761 - INFO - ```text
+django/forms/models.py
+tests/model_forms/tests.py
+django/forms/forms.py
+django/forms/boundfield.py
+django/db/models/fields/__init__.py
+```
+2026-09-28 14:57:22,079 - INFO - ```
+django/forms/models.py
+django/forms/forms.py
+django/db/models/fields/__init__.py
+django/forms/boundfield.py
+django/forms/fields.py
+```

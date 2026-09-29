@@ -1,0 +1,219 @@
+2026-09-28 20:20:36,293 - INFO - Processing bug django__django-15375
+2026-09-28 20:20:36,293 - INFO - ================ localize django__django-15375 ================
+2026-09-28 20:20:39,485 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 20:20:44,087 - INFO - [round 0] tokens=1478 tool_calls=3 content=''
+2026-09-28 20:20:44,087 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "aggregate"}
+2026-09-28 20:20:44,087 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': 'aggregate'}
+2026-09-28 20:20:48,015 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:20:48,016 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:20:48,016 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/query.py", "func_name": "aggregate"}
+2026-09-28 20:20:48,016 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:20:50,841 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:20:50,842 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:20:53,630 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/query.py', 'class_name': 'QuerySet', 'func_name': 'aggregate'}: False
+2026-09-28 20:20:53,631 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:20:53,631 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "get_aggregation"}
+2026-09-28 20:20:53,631 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'get_aggregation'}
+2026-09-28 20:20:56,945 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:20:56,946 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:20:56,946 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "get_aggregation"}
+2026-09-28 20:20:56,946 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:20:59,643 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:20:59,644 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:21:02,241 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'get_aggregation'}: False
+2026-09-28 20:21:02,241 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:02,241 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:21:02,242 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/aggregates.py', 'class_name': 'Aggregate'}
+2026-09-28 20:21:04,852 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:21:04,853 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:04,853 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Sum"}
+2026-09-28 20:21:04,853 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:08,055 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:21:08,056 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:08,056 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:21:08,057 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:08,057 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:21:08,057 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:16,707 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/aggregates.py', 'class_name': 'Aggregate'}: False
+2026-09-28 20:21:16,708 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:20,146 - INFO - [round 1] tokens=1676 tool_calls=3 content=''
+2026-09-28 20:21:20,147 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/expressions.py", "class_name": "Subquery"}
+2026-09-28 20:21:20,147 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/expressions.py', 'class_name': 'Subquery'}
+2026-09-28 20:21:23,524 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:21:23,525 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:23,525 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:21:23,525 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:23,525 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:21:23,525 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:26,002 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:21:26,003 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:21:28,037 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/expressions.py', 'class_name': 'Subquery'}: False
+2026-09-28 20:21:28,038 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:28,038 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/comparison.py", "class_name": "Coalesce"}
+2026-09-28 20:21:28,039 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/functions/comparison.py', 'class_name': 'Coalesce'}
+2026-09-28 20:21:31,277 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/comparison.py", "class_name": "Coalesce"}
+2026-09-28 20:21:31,278 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:31,278 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:21:31,278 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:31,278 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:21:31,278 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:38,822 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/functions/comparison.py', 'class_name': 'Coalesce'}: False
+2026-09-28 20:21:38,822 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:38,823 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/compiler.py", "class_name": "SQLCompiler", "func_name": "as_sql"}
+2026-09-28 20:21:38,823 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/compiler.py', 'class_name': 'SQLCompiler', 'func_name': 'as_sql'}
+2026-09-28 20:21:41,715 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/compiler.py", "class_name": "SQLCompiler"}
+2026-09-28 20:21:41,716 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:41,716 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/compiler.py", "func_name": "as_sql"}
+2026-09-28 20:21:41,716 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:21:43,605 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:21:43,606 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:21:46,342 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/compiler.py', 'class_name': 'SQLCompiler', 'func_name': 'as_sql'}: ```False```
+2026-09-28 20:21:46,343 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:49,202 - INFO - [round 2] tokens=1886 tool_calls=3 content=''
+2026-09-28 20:21:49,203 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/compiler.py", "class_name": "SQLCompiler", "func_name": "get_select"}
+2026-09-28 20:21:49,203 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/compiler.py', 'class_name': 'SQLCompiler', 'func_name': 'get_select'}
+2026-09-28 20:21:53,025 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/compiler.py", "class_name": "SQLCompiler"}
+2026-09-28 20:21:53,026 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:21:53,026 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/compiler.py", "func_name": "get_select"}
+2026-09-28 20:21:53,027 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:21:55,581 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:21:55,582 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:21:58,738 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/compiler.py', 'class_name': 'SQLCompiler', 'func_name': 'get_select'}: False
+2026-09-28 20:21:58,738 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:21:58,739 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "set_annotation_mask"}
+2026-09-28 20:21:58,739 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'set_annotation_mask'}
+2026-09-28 20:22:02,043 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:22:02,044 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:02,044 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "set_annotation_mask"}
+2026-09-28 20:22:02,044 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:22:05,742 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:22:05,743 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:05,743 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "aggregate"}
+2026-09-28 20:22:05,743 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:05,743 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "annotate"}
+2026-09-28 20:22:05,743 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:08,820 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:22:08,821 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:08,821 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate", "func_name": "resolve_expression"}
+2026-09-28 20:22:08,821 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:08,821 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:22:08,822 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:11,630 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'set_annotation_mask'}: False
+2026-09-28 20:22:11,630 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:22:11,630 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "clear_select_clause"}
+2026-09-28 20:22:11,631 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'clear_select_clause'}
+2026-09-28 20:22:14,121 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/sql/query.py", "class_name": "Query"}
+2026-09-28 20:22:14,122 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:14,122 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/sql/query.py", "func_name": "clear_select_clause"}
+2026-09-28 20:22:14,122 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 20:22:17,244 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/query.py", "class_name": "QuerySet"}
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "aggregate"}
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate", "func_name": "resolve_expression"}
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:22:17,245 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:20,096 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 20:22:20,097 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:22:23,542 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/sql/query.py', 'class_name': 'Query', 'func_name': 'clear_select_clause'}: False
+2026-09-28 20:22:23,543 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:22:25,850 - INFO - [round 3] tokens=1984 tool_calls=1 content=''
+2026-09-28 20:22:25,851 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 20:22:25,851 - INFO -   [prune] start for exit args={}
+2026-09-28 20:22:29,175 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/query.py", "class_name": "QuerySet", "func_name": "aggregate"}
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate", "func_name": "resolve_expression"}
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/aggregates.py", "class_name": "Aggregate"}
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 20:22:29,176 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/sql/query.py", "class_name": "Query", "func_name": "get_aggregation"}
+2026-09-28 20:22:29,177 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 20:22:32,059 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 20:22:32,060 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 20:22:34,738 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 20:22:34,738 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 20:22:34,738 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 20:22:34,738 - INFO - ==== tool-call loop end ====
+2026-09-28 20:22:38,890 - INFO - <locations>
+  <location>
+    <file>django/db/models/sql/query.py</file>
+    <type>function</type>
+    <name>Query.get_aggregation</name>
+  </location>
+  <location>
+    <file>django/db/models/aggregates.py</file>
+    <type>function</type>
+    <name>Aggregate.resolve_expression</name>
+  </location>
+  <location>
+    <file>django/db/models/sql/compiler.py</file>
+    <type>function</type>
+    <name>SQLCompiler.as_sql</name>
+  </location>
+  <location>
+    <file>django/db/models/expressions.py</file>
+    <type>class</type>
+    <name>Subquery</name>
+  </location>
+  <location>
+    <file>django/db/models/query.py</file>
+    <type>function</type>
+    <name>QuerySet.aggregate</name>
+  </location>
+</locations>
+2026-09-28 20:22:38,891 - INFO - parsed locations: {'django/db/models/sql/query.py': ['function: Query.get_aggregation'], 'django/db/models/aggregates.py': ['function: Aggregate.resolve_expression'], 'django/db/models/sql/compiler.py': ['function: SQLCompiler.as_sql'], 'django/db/models/expressions.py': ['class: Subquery'], 'django/db/models/query.py': ['function: QuerySet.aggregate']}

@@ -1,0 +1,53 @@
+project:
+  name: cosil-on-swe-explore-verified-intersection
+  status: configured_only
+
+sources:
+  cosil_commit: 0568e423735b399d5b089996961fea9ae142e4c7
+  swe_explore_commit: 5602f031f2d9562d0a805f83402b536e831a5a11
+  swe_explore_dataset_revision: bdb0ae45d7c337d9e1dc3ebfe2a0af6bc7c1fbd9
+  swebench_verified_revision: c104f840cc67f8b6eec6f759ebc8b2693d585d4a
+
+dataset:
+  swe_explore_jsonl: data/raw/bench.final.public.jsonl
+  swebench_verified_parquet: data/raw/verified.parquet
+  intersection_jsonl: data/processed/bench.verified_intersection.jsonl
+  cosil_jsonl: data/processed/cosil.verified_intersection.jsonl
+  issue_map_json: data/processed/issue_map.json
+  expected_instances: 451
+
+model:
+  name: gpt-5.4
+  temperature: 0.0
+  max_iterations: 10
+  top_k: 5
+
+evaluation:
+  region_mode_primary: file
+  region_mode_offline: function
+  metrics:
+    - hit_region_rate
+    - hit_file_rate
+    - precision
+    - recall
+    - f1_score
+    - ndcg_at_100
+    - ndcg_at_300
+    - ndcg_at_500
+    - recall_at_100
+    - recall_at_300
+    - recall_at_500
+    - first_useful_hit
+    - context_efficiency
+    - noise_region_rate
+    - noise_file_rate
+    - weighted_core_coverage
+
+artifacts:
+  trace_dir: results/cosil_traces
+  predictions_dir: results/predictions
+  metrics_dir: results/metrics
+  keep_repo_snapshots_after_run: false
+  keep_raw_trajectories: true
+  keep_subprocess_stdout_stderr: true
+

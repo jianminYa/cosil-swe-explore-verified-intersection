@@ -1,0 +1,25 @@
+2026-09-28 19:40:24,101 - INFO - Processing bug django__django-14787
+2026-09-28 19:40:24,101 - INFO - ================ localize django__django-14787 ================
+2026-09-28 19:40:27,170 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nmethod_decorator() should preserve wrapper assignments\nDescription\n\t\nthe function that is passed to the decorator is a partial object and does not have any of the attributes expected from a function i.e. __name__, __module__ etc...\nconsider the following case\ndef logger(func):\n\t@wraps(func)\n\tdef inner(*args, **kwargs):\n\t\ttry:\n\t\t\tresult = func(*args, **kwargs)\n\t\texcept Exception as e:\n\t\t\tresult = str(e)\n\t\tfinally:\n\t\t\tlogger.debug(f"{func.__name__} called with args: {args} and kwargs: {kwargs} resulting: {result}")\n\treturn inner\nclass Test:\n\t@method_decorator(logger)\n\tdef hello_world(self):\n\t\treturn "hello"\nTest().test_method()\nThis results in the following exception\nAttributeError: \'functools.partial\' object has no attribute \'__name__\'\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 19:40:27,170 - INFO - ================================================================================
+2026-09-28 19:40:31,273 - INFO - ```
+django/utils/decorators.py
+tests/utils_tests/test_decorators.py
+django/contrib/admin/decorators.py
+django/views/decorators/cache.py
+django/views/decorators/vary.py
+```
+2026-09-28 19:40:34,818 - INFO - ```text
+django/utils/decorators.py
+django/contrib/admin/decorators.py
+django/views/decorators/cache.py
+django/views/decorators/vary.py
+tests/utils_tests/test_decorators.py
+```
+2026-09-28 19:40:39,371 - INFO - ```
+django/utils/decorators.py
+django/contrib/admin/decorators.py
+django/views/decorators/cache.py
+django/views/decorators/vary.py
+```

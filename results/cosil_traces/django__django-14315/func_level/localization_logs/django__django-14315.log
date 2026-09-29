@@ -1,0 +1,226 @@
+2026-09-28 18:53:34,343 - INFO - Processing bug django__django-14315
+2026-09-28 18:53:34,343 - INFO - ================ localize django__django-14315 ================
+2026-09-28 18:53:37,660 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 18:53:40,908 - INFO - [round 0] tokens=1162 tool_calls=3 content=''
+2026-09-28 18:53:40,908 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:53:40,908 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/postgresql/client.py', 'class_name': 'DatabaseClient'}
+2026-09-28 18:53:43,714 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:53:43,715 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:43,715 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClientMixin"}
+2026-09-28 18:53:43,715 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:46,728 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient_psycopg2"}
+2026-09-28 18:53:46,729 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:46,729 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient_psycopg"}
+2026-09-28 18:53:46,729 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:46,729 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:53:46,729 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:49,037 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name":"django/db/backends/postgresql/client.py","func_name":"runshell"}
+2026-09-28 18:53:49,038 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:53:50,973 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/postgresql/client.py', 'class_name': 'DatabaseClient'}: False
+2026-09-28 18:53:50,974 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:53:50,974 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient"}
+2026-09-28 18:53:50,974 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/base/client.py', 'class_name': 'BaseDatabaseClient'}
+2026-09-28 18:53:53,759 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:53:53,760 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:53,760 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient"}
+2026-09-28 18:53:53,760 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:53:56,258 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/postgresql/client.py", "func_name": "runshell"}
+2026-09-28 18:53:56,259 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:53:56,259 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/client.py", "func_name": "runshell"}
+2026-09-28 18:53:56,259 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:54:00,010 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient", "func_name": "runshell"}
+2026-09-28 18:54:00,011 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:54:00,011 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient", "func_name": "settings_to_cmd_args"}
+2026-09-28 18:54:00,011 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:54:02,773 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/base/client.py', 'class_name': 'BaseDatabaseClient'}: False
+2026-09-28 18:54:02,774 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:02,774 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:02,775 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/mysql/client.py', 'class_name': 'DatabaseClient'}
+2026-09-28 18:54:05,689 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:05,690 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:05,690 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:05,690 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:08,696 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:08,697 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:08,697 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseWrapper"}
+2026-09-28 18:54:08,697 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:08,697 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient"}
+2026-09-28 18:54:08,697 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:10,639 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:54:10,639 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:54:13,567 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/mysql/client.py', 'class_name': 'DatabaseClient'}: False
+2026-09-28 18:54:13,568 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:16,629 - INFO - [round 1] tokens=1389 tool_calls=4 content=''
+2026-09-28 18:54:16,630 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/oracle/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:16,630 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/oracle/client.py', 'class_name': 'DatabaseClient'}
+2026-09-28 18:54:19,439 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:19,440 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:19,440 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:19,440 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:19,440 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:19,440 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:23,138 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClientMixin"}
+2026-09-28 18:54:23,139 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:23,139 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient_psycopg2"}
+2026-09-28 18:54:23,139 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:23,139 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient_psycopg"}
+2026-09-28 18:54:23,139 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:25,552 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:54:25,553 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:54:27,950 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/oracle/client.py', 'class_name': 'DatabaseClient'}: False
+2026-09-28 18:54:27,950 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:27,951 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:27,951 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/sqlite3/client.py', 'class_name': 'DatabaseClient'}
+2026-09-28 18:54:30,763 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/mysql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/oracle/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/sqlite3/base.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:30,764 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:33,061 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 18:54:33,062 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:54:35,851 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/sqlite3/client.py', 'class_name': 'DatabaseClient'}: False
+2026-09-28 18:54:35,852 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:35,852 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseWrapper"}
+2026-09-28 18:54:35,852 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/postgresql/base.py', 'class_name': 'DatabaseWrapper'}
+2026-09-28 18:54:39,448 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:39,449 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:39,449 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient"}
+2026-09-28 18:54:39,449 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:41,856 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/postgresql/client.py", "func_name": "runshell"}
+2026-09-28 18:54:41,857 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:54:41,857 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/backends/base/client.py", "func_name": "runshell"}
+2026-09-28 18:54:41,857 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:54:43,906 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:54:43,906 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:54:46,317 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/postgresql/base.py', 'class_name': 'DatabaseWrapper'}: False
+2026-09-28 18:54:46,318 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:46,318 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 18:54:46,318 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations'}
+2026-09-28 18:54:48,611 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:54:48,612 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:48,612 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient"}
+2026-09-28 18:54:48,612 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:54:51,943 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"django/db/backends/postgresql/client.py","func_name":"runshell"}
+2026-09-28 18:54:51,944 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:54:54,976 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:54:54,976 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:54:57,572 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations'}: False
+2026-09-28 18:54:57,573 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:54:59,769 - INFO - [round 2] tokens=1532 tool_calls=1 content=''
+2026-09-28 18:54:59,770 - INFO - [round 2] [tool-call] get_code_of_class args={"file_name":"django/db/backends/postgresql/client.py","class_name":"DatabaseClient"}
+2026-09-28 18:54:59,770 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/backends/postgresql/client.py', 'class_name': 'DatabaseClient'}
+2026-09-28 18:55:04,390 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient"}
+2026-09-28 18:55:04,391 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:55:04,391 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClientMixin"}
+2026-09-28 18:55:04,391 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:55:07,599 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseClient"}
+2026-09-28 18:55:07,600 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:55:07,600 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseWrapper"}
+2026-09-28 18:55:07,600 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:55:10,735 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 18:55:10,736 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 18:55:13,460 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/backends/postgresql/client.py', 'class_name': 'DatabaseClient'}: False
+2026-09-28 18:55:13,460 - INFO - [round 2] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:55:16,386 - INFO - [round 3] tokens=1580 tool_calls=1 content=''
+2026-09-28 18:55:16,387 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 18:55:16,387 - INFO -   [prune] start for exit args={}
+2026-09-28 18:55:20,071 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/client.py", "class_name": "DatabaseClient", "func_name": "settings_to_cmd_args_env"}
+2026-09-28 18:55:20,072 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:55:20,072 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/client.py", "class_name": "BaseDatabaseClient", "func_name": "runshell"}
+2026-09-28 18:55:20,072 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 18:55:22,487 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"django/db/backends/postgresql/client.py","class_name":"DatabaseClient"}
+2026-09-28 18:55:22,488 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 18:55:25,296 - INFO -   [prune 2] [tool-call] get_code_of_file_function args={"file_name":"django/db/backends/postgresql/client.py","func_name":"settings_to_cmd_args_env"}
+2026-09-28 18:55:25,297 - INFO -   [prune 2] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 18:55:27,961 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 18:55:27,962 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 18:55:27,962 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 18:55:27,962 - INFO - ==== tool-call loop end ====
+2026-09-28 18:55:32,211 - INFO - <locations>
+  <location>
+    <file>django/db/backends/postgresql/client.py</file>
+    <type>function</type>
+    <name>DatabaseClient.settings_to_cmd_args_env</name>
+  </location>
+  <location>
+    <file>django/db/backends/base/client.py</file>
+    <type>function</type>
+    <name>BaseDatabaseClient.runshell</name>
+  </location>
+  <location>
+    <file>django/db/backends/postgresql/client.py</file>
+    <type>class</type>
+    <name>DatabaseClient</name>
+  </location>
+  <location>
+    <file>django/db/backends/mysql/client.py</file>
+    <type>function</type>
+    <name>DatabaseClient.settings_to_cmd_args_env</name>
+  </location>
+  <location>
+    <file>django/db/backends/oracle/client.py</file>
+    <type>function</type>
+    <name>DatabaseClient.settings_to_cmd_args_env</name>
+  </location>
+</locations>
+2026-09-28 18:55:32,212 - INFO - parsed locations: {'django/db/backends/postgresql/client.py': ['function: DatabaseClient.settings_to_cmd_args_env\nclass: DatabaseClient'], 'django/db/backends/base/client.py': ['function: BaseDatabaseClient.runshell'], 'django/db/backends/mysql/client.py': ['function: DatabaseClient.settings_to_cmd_args_env'], 'django/db/backends/oracle/client.py': ['function: DatabaseClient.settings_to_cmd_args_env']}

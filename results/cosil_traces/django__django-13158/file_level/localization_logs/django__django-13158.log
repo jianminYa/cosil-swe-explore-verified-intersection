@@ -1,0 +1,26 @@
+2026-09-28 17:04:35,963 - INFO - Processing bug django__django-13158
+2026-09-28 17:04:35,963 - INFO - ================ localize django__django-13158 ================
+2026-09-28 17:04:39,067 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nQuerySet.none() on combined queries returns all results.\nDescription\n\t\nI came across this issue on Stack Overflow. I\'m not 100% sure it\'s a bug, but it does seem strange. With this code (excuse the bizarre example filtering):\nclass Publication(models.Model):\n\tpass\nclass Article(models.Model):\n\tpublications = models.ManyToManyField(to=Publication, blank=True, null=True)\nclass ArticleForm(forms.ModelForm):\n\tpublications = forms.ModelMultipleChoiceField(\n\t\tPublication.objects.filter(id__lt=2) | Publication.objects.filter(id__gt=5),\n\t\trequired=False,\n\t)\n\tclass Meta:\n\t\tmodel = Article\n\t\tfields = ["publications"]\nclass ArticleAdmin(admin.ModelAdmin):\n\tform = ArticleForm\nThis works well. However, changing the ModelMultipleChoiceField queryset to use union() breaks things.\npublications = forms.ModelMultipleChoiceField(\n\tPublication.objects.filter(id__lt=2).union(\n\t\tPublication.objects.filter(id__gt=5)\n\t),\n\trequired=False,\n)\nThe form correctly shows only the matching objects. However, if you submit this form while empty (i.e. you didn\'t select any publications), ALL objects matching the queryset will be added. Using the OR query, NO objects are added, as I\'d expect.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 17:04:39,067 - INFO - ================================================================================
+2026-09-28 17:04:42,433 - INFO - ```
+django/forms/models.py
+django/db/models/query.py
+django/db/models/sql/query.py
+django/forms/fields.py
+django/contrib/admin/options.py
+```
+2026-09-28 17:04:44,774 - INFO - ```python
+django/forms/models.py
+django/db/models/query.py
+django/db/models/sql/query.py
+django/forms/fields.py
+django/contrib/admin/options.py
+```
+2026-09-28 17:04:47,243 - INFO - ```
+django/forms/models.py
+django/forms/fields.py
+django/db/models/query.py
+django/db/models/sql/query.py
+django/contrib/admin/options.py
+```

@@ -1,0 +1,234 @@
+2026-09-28 14:50:22,738 - INFO - Processing bug django__django-11400
+2026-09-28 14:50:22,738 - INFO - ================ localize django__django-11400 ================
+2026-09-28 14:54:53,777 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 14:54:57,759 - INFO - [round 0] tokens=1193 tool_calls=3 content=''
+2026-09-28 14:54:57,759 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:54:57,761 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'RelatedFieldListFilter'}
+2026-09-28 14:55:00,294 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:00,295 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:00,295 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "FieldListFilter"}
+2026-09-28 14:55:00,295 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:03,306 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name":"django/contrib/admin/filters.py","func_name":"__all__"}
+2026-09-28 14:55:03,308 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:55:05,266 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 14:55:05,267 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:55:08,000 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'RelatedFieldListFilter'}: False
+2026-09-28 14:55:08,001 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:55:08,001 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:08,001 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'RelatedOnlyFieldListFilter'}
+2026-09-28 14:55:11,397 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:11,398 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:11,398 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:11,398 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:14,334 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:14,335 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:14,335 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:14,335 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:17,013 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 14:55:17,014 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:55:19,377 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'RelatedOnlyFieldListFilter'}: False
+2026-09-28 14:55:19,378 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:55:19,378 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 14:55:19,378 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin'}
+2026-09-28 14:55:22,101 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:22,102 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:22,102 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:22,102 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:22,102 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "BaseModelAdmin"}
+2026-09-28 14:55:22,102 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:24,654 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 14:55:24,654 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:55:27,039 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin'}: False
+2026-09-28 14:55:27,040 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:55:31,200 - INFO - [round 1] tokens=1401 tool_calls=3 content=''
+2026-09-28 14:55:31,201 - INFO - [round 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/filters.py", "func_name": "field_choices"}
+2026-09-28 14:55:31,201 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/contrib/admin/filters.py', 'func_name': 'field_choices'}
+2026-09-28 14:55:34,836 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:34,837 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:34,837 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:34,837 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:36,997 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 14:55:36,998 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:55:39,773 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/contrib/admin/filters.py', 'func_name': 'field_choices'}: False
+2026-09-28 14:55:39,774 - INFO - [round 1] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:55:39,774 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin", "func_name": "get_ordering"}
+2026-09-28 14:55:39,774 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_ordering'}
+2026-09-28 14:55:43,559 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/options.py", "class_name": "ModelAdmin"}
+2026-09-28 14:55:43,560 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:43,560 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:43,560 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:43,560 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:43,560 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:46,652 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 14:55:46,653 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:55:49,881 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/options.py', 'class_name': 'ModelAdmin', 'func_name': 'get_ordering'}: False
+2026-09-28 14:55:49,882 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:55:49,882 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/__init__.py", "class_name": "Field", "func_name": "get_choices"}
+2026-09-28 14:55:49,882 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/__init__.py', 'class_name': 'Field', 'func_name': 'get_choices'}
+2026-09-28 14:55:53,381 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/__init__.py", "func_name": "get_choices"}
+2026-09-28 14:55:53,382 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:55:53,382 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter", "func_name": "field_choices"}
+2026-09-28 14:55:53,382 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 14:55:53,382 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter", "func_name": "field_choices"}
+2026-09-28 14:55:53,382 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 14:55:56,741 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:55:56,742 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:56,742 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:55:56,742 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:56,742 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignObjectRel"}
+2026-09-28 14:55:56,742 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:55:59,356 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 14:55:59,357 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:56:02,085 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/__init__.py', 'class_name': 'Field', 'func_name': 'get_choices'}: False
+2026-09-28 14:56:02,085 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:56:05,838 - INFO - [round 2] tokens=1618 tool_calls=3 content=''
+2026-09-28 14:56:05,839 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey", "func_name": "get_choices"}
+2026-09-28 14:56:05,839 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ForeignKey', 'func_name': 'get_choices'}
+2026-09-28 14:56:09,061 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignObjectRel"}
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/related.py", "class_name": "ForeignKey"}
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:09,062 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:12,558 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/__init__.py", "func_name": "BLANK_CHOICE_DASH"}
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/fields/related.py", "func_name": "resolve_relation"}
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/filters.py", "func_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:12,559 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/filters.py", "func_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:12,560 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:17,855 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 14:56:17,856 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:56:20,499 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/related.py', 'class_name': 'ForeignKey', 'func_name': 'get_choices'}: False
+2026-09-28 14:56:20,500 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:56:20,500 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/fields/reverse_related.py", "class_name": "ForeignObjectRel", "func_name": "get_choices"}
+2026-09-28 14:56:20,500 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/fields/reverse_related.py', 'class_name': 'ForeignObjectRel', 'func_name': 'get_choices'}
+2026-09-28 14:56:23,703 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:23,704 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:23,704 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:23,704 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:23,704 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/fields/__init__.py", "class_name": "Field"}
+2026-09-28 14:56:23,704 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:26,588 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/filters.py", "func_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:26,589 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:26,589 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/contrib/admin/filters.py", "func_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:26,589 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 14:56:29,128 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 14:56:29,129 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:56:31,391 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/fields/reverse_related.py', 'class_name': 'ForeignObjectRel', 'func_name': 'get_choices'}: False
+2026-09-28 14:56:31,392 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:56:31,392 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/contrib/admin/filters.py", "class_name": "FieldListFilter", "func_name": "create"}
+2026-09-28 14:56:31,393 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'FieldListFilter', 'func_name': 'create'}
+2026-09-28 14:56:34,307 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:34,308 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:34,308 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:34,308 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:34,308 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "FieldListFilter"}
+2026-09-28 14:56:34,309 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:36,742 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 14:56:36,743 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:56:38,927 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/contrib/admin/filters.py', 'class_name': 'FieldListFilter', 'func_name': 'create'}: False
+2026-09-28 14:56:38,928 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:56:41,531 - INFO - [round 3] tokens=1716 tool_calls=1 content=''
+2026-09-28 14:56:41,532 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 14:56:41,532 - INFO -   [prune] start for exit args={}
+2026-09-28 14:56:43,851 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedFieldListFilter"}
+2026-09-28 14:56:43,852 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:43,852 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/contrib/admin/filters.py", "class_name": "RelatedOnlyFieldListFilter"}
+2026-09-28 14:56:43,852 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 14:56:46,374 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 14:56:46,375 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 14:56:50,328 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 14:56:50,328 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 14:56:50,328 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 14:56:50,328 - INFO - ==== tool-call loop end ====
+2026-09-28 14:56:54,984 - INFO - <locations>
+  <location>
+    <file>django/contrib/admin/filters.py</file>
+    <type>function</type>
+    <name>RelatedFieldListFilter.field_choices</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/filters.py</file>
+    <type>function</type>
+    <name>RelatedOnlyFieldListFilter.field_choices</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/options.py</file>
+    <type>function</type>
+    <name>ModelAdmin.get_ordering</name>
+  </location>
+  <location>
+    <file>django/db/models/fields/__init__.py</file>
+    <type>function</type>
+    <name>Field.get_choices</name>
+  </location>
+  <location>
+    <file>django/contrib/admin/filters.py</file>
+    <type>class</type>
+    <name>RelatedFieldListFilter</name>
+  </location>
+</locations>
+2026-09-28 14:56:54,987 - INFO - parsed locations: {'django/contrib/admin/filters.py': ['function: RelatedFieldListFilter.field_choices\nfunction: RelatedOnlyFieldListFilter.field_choices\nclass: RelatedFieldListFilter'], 'django/contrib/admin/options.py': ['function: ModelAdmin.get_ordering'], 'django/db/models/fields/__init__.py': ['function: Field.get_choices']}

@@ -1,0 +1,25 @@
+2026-09-28 15:57:01,753 - INFO - Processing bug django__django-12155
+2026-09-28 15:57:01,753 - INFO - ================ localize django__django-12155 ================
+2026-09-28 15:57:04,833 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': '\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\ndocutils reports an error rendering view docstring when the first line is not empty\nDescription\n\t\nCurrently admindoc works correctly only with docstrings where the first line is empty, and all Django docstrings are formatted in this way.\nHowever usually the docstring text starts at the first line, e.g.:\ndef test():\n\t"""test tests something.\n\t"""\nand this cause an error:\nError in "default-role" directive:\nno content permitted.\n.. default-role:: cmsreference\nThe culprit is this code in trim_docstring:\nindent = min(len(line) - len(line.lstrip()) for line in lines if line.lstrip())\nThe problem is that the indentation of the first line is 0.\nThe solution is to skip the first line:\nindent = min(len(line) - len(line.lstrip()) for line in lines[1:] if line.lstrip())\nThanks.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet\'s locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the \'file1.py\' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n'}]
+2026-09-28 15:57:04,833 - INFO - ================================================================================
+2026-09-28 15:57:08,233 - INFO - ```
+django/contrib/admindocs/utils.py
+django/contrib/admindocs/views.py
+django/contrib/admindocs/__init__.py
+django/contrib/admindocs/urls.py
+tests/admin_docs/tests.py
+```
+2026-09-28 15:57:11,541 - INFO - ```
+tests/admin_docs/tests.py
+django/contrib/admindocs/views.py
+django/contrib/admindocs/utils.py
+django/contrib/admindocs/urls.py
+django/contrib/admindocs/__init__.py
+```
+2026-09-28 15:57:14,263 - INFO - ```
+django/contrib/admindocs/utils.py
+django/contrib/admindocs/views.py
+django/contrib/admindocs/urls.py
+django/contrib/admindocs/__init__.py
+```

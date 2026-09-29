@@ -1,0 +1,243 @@
+2026-09-29 00:03:14,037 - INFO - Processing bug psf__requests-1724
+2026-09-29 00:03:14,037 - INFO - ================ localize psf__requests-1724 ================
+2026-09-29 00:03:17,253 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-29 00:03:29,468 - INFO - [round 0] tokens=3267 tool_calls=7 content=''
+2026-09-29 00:03:29,468 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/sessions.py", "class_name": "Session", "func_name": "request"}
+2026-09-29 00:03:29,468 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/sessions.py', 'class_name': 'Session', 'func_name': 'request'}
+2026-09-29 00:03:33,156 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:03:33,157 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:33,157 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:03:33,157 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:03:35,807 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"requests/sessions.py","class_name":"SessionRedirectMixin"}
+2026-09-29 00:03:35,808 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:38,772 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 00:03:38,773 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:03:41,515 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/sessions.py', 'class_name': 'Session', 'func_name': 'request'}: False
+2026-09-29 00:03:41,516 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:03:41,516 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare_method"}
+2026-09-29 00:03:41,516 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest', 'func_name': 'prepare_method'}
+2026-09-29 00:03:44,196 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:03:44,197 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:44,197 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:03:44,197 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:46,983 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:03:46,984 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:03:49,465 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest', 'func_name': 'prepare_method'}: ```False```
+2026-09-29 00:03:49,466 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:03:49,466 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare"}
+2026-09-29 00:03:49,466 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest', 'func_name': 'prepare'}
+2026-09-29 00:03:52,821 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:03:52,822 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:52,822 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:03:52,822 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:03:55,191 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:03:55,192 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:03:57,722 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest', 'func_name': 'prepare'}: ```False```
+2026-09-29 00:03:57,723 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:03:57,723 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/adapters.py", "class_name": "HTTPAdapter", "func_name": "send"}
+2026-09-29 00:03:57,723 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/adapters.py', 'class_name': 'HTTPAdapter', 'func_name': 'send'}
+2026-09-29 00:04:00,524 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/sessions.py", "func_name": "request"}
+2026-09-29 00:04:00,524 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:04:00,525 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:00,525 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:00,525 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:04:00,525 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:03,404 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "SessionRedirectMixin"}
+2026-09-29 00:04:03,405 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:03,405 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:03,405 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:03,405 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "RequestEncodingMixin"}
+2026-09-29 00:04:03,405 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:05,839 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-29 00:04:05,839 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:04:07,964 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/adapters.py', 'class_name': 'HTTPAdapter', 'func_name': 'send'}: ```False```
+2026-09-29 00:04:07,964 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:07,965 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/packages/urllib3/connectionpool.py", "class_name": "HTTPConnectionPool", "func_name": "urlopen"}
+2026-09-29 00:04:07,965 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool', 'func_name': 'urlopen'}
+2026-09-29 00:04:10,943 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/sessions.py", "class_name": "Session", "func_name": "request"}
+2026-09-29 00:04:10,944 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:10,944 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare_method"}
+2026-09-29 00:04:10,944 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:10,944 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:04:10,944 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:04:13,455 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:04:13,456 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:04:15,930 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool', 'func_name': 'urlopen'}: ```False```
+2026-09-29 00:04:15,931 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:15,931 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "requests/packages/urllib3/connectionpool.py", "class_name": "HTTPConnectionPool", "func_name": "_make_request"}
+2026-09-29 00:04:15,931 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool', 'func_name': '_make_request'}
+2026-09-29 00:04:18,956 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/sessions.py", "class_name": "Session", "func_name": "request"}
+2026-09-29 00:04:18,957 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:18,957 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare_method"}
+2026-09-29 00:04:18,957 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:18,957 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare"}
+2026-09-29 00:04:18,957 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:21,256 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"requests/models.py","class_name":"PreparedRequest"}
+2026-09-29 00:04:21,257 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:23,386 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"requests/sessions.py","class_name":"Session"}
+2026-09-29 00:04:23,387 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:26,989 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool', 'func_name': '_make_request'}: False
+2026-09-29 00:04:26,989 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:26,989 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:04:26,990 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'requests/api.py', 'func_name': 'request'}
+2026-09-29 00:04:30,299 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/sessions.py", "class_name": "Session", "func_name": "request"}
+2026-09-29 00:04:30,300 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:04:30,300 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:04:30,300 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:04:32,795 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:04:32,796 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:04:34,829 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'requests/api.py', 'func_name': 'request'}: False
+2026-09-29 00:04:34,830 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:37,995 - INFO - [round 1] tokens=3576 tool_calls=4 content=''
+2026-09-29 00:04:37,996 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:04:37,996 - INFO -   [prune] start for get_code_of_class args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest'}
+2026-09-29 00:04:40,534 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:04:40,535 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:40,535 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:40,535 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:42,548 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:04:42,548 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:04:45,025 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'requests/models.py', 'class_name': 'PreparedRequest'}: ```False```
+2026-09-29 00:04:45,026 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:45,026 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:45,026 - INFO -   [prune] start for get_code_of_class args={'file_name': 'requests/sessions.py', 'class_name': 'Session'}
+2026-09-29 00:04:48,075 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/sessions.py", "func_name": "session"}
+2026-09-29 00:04:48,076 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:04:50,646 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "SessionRedirectMixin"}
+2026-09-29 00:04:50,647 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:50,647 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:50,647 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:54,206 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "SessionRedirectMixin"}
+2026-09-29 00:04:54,207 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:54,207 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "HTTPSession"}
+2026-09-29 00:04:54,208 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:56,167 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'requests/sessions.py', 'class_name': 'Session'}: ```False```
+2026-09-29 00:04:56,167 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:04:56,167 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "requests/adapters.py", "class_name": "HTTPAdapter"}
+2026-09-29 00:04:56,167 - INFO -   [prune] start for get_code_of_class args={'file_name': 'requests/adapters.py', 'class_name': 'HTTPAdapter'}
+2026-09-29 00:04:58,912 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:04:58,913 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:04:58,913 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:04:58,913 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:05:01,120 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:05:01,121 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:05:03,833 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'requests/adapters.py', 'class_name': 'HTTPAdapter'}: False
+2026-09-29 00:05:03,834 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:05:03,834 - INFO - [round 1] [tool-call] get_code_of_class args={"file_name": "requests/packages/urllib3/connectionpool.py", "class_name": "HTTPConnectionPool"}
+2026-09-29 00:05:03,834 - INFO -   [prune] start for get_code_of_class args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool'}
+2026-09-29 00:05:06,315 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/sessions.py", "class_name": "Session"}
+2026-09-29 00:05:06,316 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:05:06,316 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "requests/models.py", "class_name": "PreparedRequest"}
+2026-09-29 00:05:06,316 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:05:06,316 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "requests/api.py", "func_name": "request"}
+2026-09-29 00:05:06,316 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-29 00:05:09,056 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-29 00:05:09,057 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-29 00:05:11,589 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'requests/packages/urllib3/connectionpool.py', 'class_name': 'HTTPConnectionPool'}: False
+2026-09-29 00:05:11,590 - INFO - [round 1] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:05:13,799 - INFO - [round 2] tokens=3698 tool_calls=1 content=''
+2026-09-29 00:05:13,800 - INFO - [round 2] [tool-call] exit args={}
+2026-09-29 00:05:13,800 - INFO -   [prune] start for exit args={}
+2026-09-29 00:05:16,785 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/sessions.py", "class_name": "Session", "func_name": "request"}
+2026-09-29 00:05:16,786 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:05:16,786 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "PreparedRequest", "func_name": "prepare_method"}
+2026-09-29 00:05:16,786 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:05:16,786 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "requests/models.py", "class_name": "Request", "func_name": "prepare"}
+2026-09-29 00:05:16,786 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-29 00:05:19,256 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name":"requests/sessions.py","class_name":"Session"}
+2026-09-29 00:05:19,257 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:05:21,552 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name":"requests/sessions.py","class_name":"SessionRedirectMixin"}
+2026-09-29 00:05:21,553 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-29 00:05:25,772 - INFO -   [prune] decision for exit args={}: False
+2026-09-29 00:05:25,773 - INFO - [round 2] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-29 00:05:25,773 - INFO - [round 2] model called exit(), ending tool loop
+2026-09-29 00:05:25,773 - INFO - ==== tool-call loop end ====
+2026-09-29 00:05:29,650 - INFO - <locations>
+  <location>
+    <file>requests/models.py</file>
+    <type>function</type>
+    <name>PreparedRequest.prepare_method</name>
+  </location>
+  <location>
+    <file>requests/sessions.py</file>
+    <type>function</type>
+    <name>Session.request</name>
+  </location>
+  <location>
+    <file>requests/models.py</file>
+    <type>function</type>
+    <name>PreparedRequest.prepare</name>
+  </location>
+  <location>
+    <file>requests/adapters.py</file>
+    <type>function</type>
+    <name>HTTPAdapter.send</name>
+  </location>
+  <location>
+    <file>requests/api.py</file>
+    <type>function</type>
+    <name>request</name>
+  </location>
+</locations>
+2026-09-29 00:05:29,651 - INFO - parsed locations: {'requests/models.py': ['function: PreparedRequest.prepare_method\nfunction: PreparedRequest.prepare'], 'requests/sessions.py': ['function: Session.request'], 'requests/adapters.py': ['function: HTTPAdapter.send'], 'requests/api.py': ['function: request']}

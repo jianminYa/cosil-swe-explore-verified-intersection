@@ -1,0 +1,252 @@
+2026-09-28 19:43:03,019 - INFO - Processing bug django__django-14792
+2026-09-28 19:43:03,019 - INFO - ================ localize django__django-14792 ================
+2026-09-28 19:43:06,331 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 19:43:10,350 - INFO - [round 0] tokens=1443 tool_calls=3 content=''
+2026-09-28 19:43:10,351 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:10,351 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TimezoneMixin'}
+2026-09-28 19:43:13,860 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/db/models/functions/datetime.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "Extract"}
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "Trunc"}
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:13,861 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:17,221 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:17,222 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:17,222 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:17,222 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:17,222 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:17,222 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:20,424 - INFO -   [prune 2] [tool-call] exit args={}
+2026-09-28 19:43:20,425 - INFO -   [prune 2] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:43:23,093 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TimezoneMixin'}: False
+2026-09-28 19:43:23,094 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:43:23,094 - INFO - [round 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:23,094 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/utils/timezone.py', 'func_name': '_get_timezone_name'}
+2026-09-28 19:43:25,500 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/utils/timezone.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:25,501 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:25,501 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_prepare_tzname_delta"}
+2026-09-28 19:43:25,501 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:43:28,994 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:28,995 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:28,995 - INFO -   [prune 1] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:28,995 - INFO -   [prune 1] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:28,995 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_convert_sql_to_tz"}
+2026-09-28 19:43:28,996 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:43:32,501 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "Trunc"}
+2026-09-28 19:43:32,502 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:32,502 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:32,502 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:32,503 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/utils/timezone.py", "class_name": "UTC"}
+2026-09-28 19:43:32,503 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:34,796 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/utils/timezone.py', 'func_name': '_get_timezone_name'}: False
+2026-09-28 19:43:34,797 - INFO - [round 0] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:43:34,797 - INFO - [round 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_prepare_tzname_delta"}
+2026-09-28 19:43:34,797 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': '_prepare_tzname_delta'}
+2026-09-28 19:43:38,481 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:38,482 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:38,482 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:38,482 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:38,482 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:38,482 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:41,384 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:43:41,385 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:43:43,412 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': '_prepare_tzname_delta'}: False
+2026-09-28 19:43:43,413 - INFO - [round 0] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:43:46,387 - INFO - [round 1] tokens=1658 tool_calls=3 content=''
+2026-09-28 19:43:46,388 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin", "func_name": "get_tzname"}
+2026-09-28 19:43:46,388 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TimezoneMixin', 'func_name': 'get_tzname'}
+2026-09-28 19:43:49,197 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:49,198 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:49,198 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:49,198 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:49,198 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:49,198 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:51,946 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:43:51,947 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:43:54,625 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TimezoneMixin', 'func_name': 'get_tzname'}: ```False```
+2026-09-28 19:43:54,625 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:43:54,625 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TruncBase", "func_name": "as_sql"}
+2026-09-28 19:43:54,626 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TruncBase', 'func_name': 'as_sql'}
+2026-09-28 19:43:57,656 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:43:57,657 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:57,657 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:43:57,657 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:43:57,657 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:43:57,657 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:43:59,963 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:43:59,964 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:44:03,174 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'TruncBase', 'func_name': 'as_sql'}: False
+2026-09-28 19:44:03,175 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:03,175 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/models/functions/datetime.py", "class_name": "Extract", "func_name": "as_sql"}
+2026-09-28 19:44:03,175 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'Extract', 'func_name': 'as_sql'}
+2026-09-28 19:44:06,390 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "Extract"}
+2026-09-28 19:44:06,391 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:06,391 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:06,391 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:06,391 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:44:06,391 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:10,075 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:44:10,076 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:44:12,546 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/models/functions/datetime.py', 'class_name': 'Extract', 'func_name': 'as_sql'}: False
+2026-09-28 19:44:12,546 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:15,942 - INFO - [round 2] tokens=1884 tool_calls=3 content=''
+2026-09-28 19:44:15,943 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "datetime_trunc_sql"}
+2026-09-28 19:44:15,943 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'datetime_trunc_sql'}
+2026-09-28 19:44:19,360 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:44:19,361 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:19,361 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:19,361 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:19,361 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:44:19,361 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:44:22,004 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:44:22,005 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:44:24,289 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'datetime_trunc_sql'}: False
+2026-09-28 19:44:24,290 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:24,290 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "datetime_extract_sql"}
+2026-09-28 19:44:24,290 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'datetime_extract_sql'}
+2026-09-28 19:44:26,963 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:44:26,964 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:26,964 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:26,964 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:26,964 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:44:26,964 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:44:29,518 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:44:29,519 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:44:31,753 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': 'datetime_extract_sql'}: False
+2026-09-28 19:44:31,754 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:31,754 - INFO - [round 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_convert_sql_to_tz"}
+2026-09-28 19:44:31,754 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': '_convert_sql_to_tz'}
+2026-09-28 19:44:34,357 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations"}
+2026-09-28 19:44:34,358 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:34,358 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:34,358 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:34,358 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/utils/timezone.py", "func_name": "_get_timezone_name"}
+2026-09-28 19:44:34,358 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:44:36,947 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:44:36,948 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:44:39,611 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/db/backends/postgresql/operations.py', 'class_name': 'DatabaseOperations', 'func_name': '_convert_sql_to_tz'}: False
+2026-09-28 19:44:39,612 - INFO - [round 2] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:42,401 - INFO - [round 3] tokens=1982 tool_calls=1 content=''
+2026-09-28 19:44:42,402 - INFO - [round 3] [tool-call] exit args={}
+2026-09-28 19:44:42,402 - INFO -   [prune] start for exit args={}
+2026-09-28 19:44:45,536 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_prepare_tzname_delta"}
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "datetime_trunc_sql"}
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "datetime_extract_sql"}
+2026-09-28 19:44:45,537 - INFO -   [prune 0] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:50,010 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseOperations", "func_name": "_prepare_tzname_delta"}
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseOperations", "func_name": "datetime_trunc_sql"}
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/base.py", "class_name": "DatabaseOperations", "func_name": "datetime_extract_sql"}
+2026-09-28 19:44:50,011 - INFO -   [prune 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:53,872 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "django/db/models/functions/datetime.py", "class_name": "TimezoneMixin"}
+2026-09-28 19:44:53,873 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:44:53,873 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/postgresql/operations.py", "class_name": "DatabaseOperations", "func_name": "_convert_sql_to_tz"}
+2026-09-28 19:44:53,873 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:53,873 - INFO -   [prune 2] [tool-call] get_code_of_class_function args={"file_name": "django/db/backends/base/operations.py", "class_name": "BaseDatabaseOperations", "func_name": "_prepare_tzname_delta"}
+2026-09-28 19:44:53,873 - INFO -   [prune 2] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:44:56,740 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 19:44:56,741 - INFO - [round 3] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:44:56,741 - INFO - [round 3] model called exit(), ending tool loop
+2026-09-28 19:44:56,741 - INFO - ==== tool-call loop end ====
+2026-09-28 19:45:01,050 - INFO - <locations>
+  <location>
+    <file>django/db/backends/postgresql/operations.py</file>
+    <type>function</type>
+    <name>DatabaseOperations._prepare_tzname_delta</name>
+  </location>
+  <location>
+    <file>django/db/models/functions/datetime.py</file>
+    <type>function</type>
+    <name>TimezoneMixin.get_tzname</name>
+  </location>
+  <location>
+    <file>django/utils/timezone.py</file>
+    <type>function</type>
+    <name>_get_timezone_name</name>
+  </location>
+  <location>
+    <file>django/db/backends/postgresql/operations.py</file>
+    <type>function</type>
+    <name>DatabaseOperations._convert_sql_to_tz</name>
+  </location>
+  <location>
+    <file>django/db/models/functions/datetime.py</file>
+    <type>class</type>
+    <name>TimezoneMixin</name>
+  </location>
+</locations>
+2026-09-28 19:45:01,051 - INFO - parsed locations: {'django/db/backends/postgresql/operations.py': ['function: DatabaseOperations._prepare_tzname_delta\nfunction: DatabaseOperations._convert_sql_to_tz'], 'django/db/models/functions/datetime.py': ['function: TimezoneMixin.get_tzname\nclass: TimezoneMixin'], 'django/utils/timezone.py': ['function: _get_timezone_name']}

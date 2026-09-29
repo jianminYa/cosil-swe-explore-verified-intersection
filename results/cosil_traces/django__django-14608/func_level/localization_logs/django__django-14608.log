@@ -1,0 +1,259 @@
+2026-09-28 19:23:29,530 - INFO - Processing bug django__django-14608
+2026-09-28 19:23:29,530 - INFO - ================ localize django__django-14608 ================
+2026-09-28 19:23:32,725 - INFO - ==== tool-call loop start (max_try=10, prune=True, max_context=100000, reserved=13521) ====
+2026-09-28 19:23:36,098 - INFO - [round 0] tokens=1133 tool_calls=3 content=''
+2026-09-28 19:23:36,098 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:23:36,098 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet'}
+2026-09-28 19:23:39,628 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/forms/formsets.py", "func_name": "all_valid"}
+2026-09-28 19:23:39,629 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:23:39,629 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:23:39,629 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:39,630 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:23:39,630 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:41,968 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:23:41,969 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:23:45,095 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet'}: ```False```
+2026-09-28 19:23:45,096 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:23:45,096 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:23:45,096 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/utils.py', 'class_name': 'ErrorList'}
+2026-09-28 19:23:48,016 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/util.py", "class_name": "ErrorList"}
+2026-09-28 19:23:48,017 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:48,017 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:23:48,017 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:48,017 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:23:48,017 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:51,091 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:23:51,092 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:23:53,995 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/utils.py', 'class_name': 'ErrorList'}: False
+2026-09-28 19:23:53,996 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:23:53,996 - INFO - [round 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:23:53,996 - INFO -   [prune] start for get_code_of_class args={'file_name': 'django/forms/forms.py', 'class_name': 'BaseForm'}
+2026-09-28 19:23:57,592 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "Form"}
+2026-09-28 19:23:57,593 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:57,593 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:23:57,594 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:23:57,594 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/forms/utils.py", "func_name": "ErrorList"}
+2026-09-28 19:23:57,594 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:24:00,224 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:24:00,225 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:00,225 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "FormSet"}
+2026-09-28 19:24:00,225 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:00,225 - INFO -   [prune 1] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:24:00,225 - INFO -   [prune 1] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:03,962 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:24:03,963 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:03,963 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:24:03,963 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:03,963 - INFO -   [prune 2] [tool-call] get_code_of_class args={"file_name": "forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:24:03,963 - INFO -   [prune 2] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:06,952 - INFO -   [prune] decision for get_code_of_class args={'file_name': 'django/forms/forms.py', 'class_name': 'BaseForm'}: False
+2026-09-28 19:24:06,953 - INFO - [round 0] [tool-result] get_code_of_class ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:24:09,727 - INFO - [round 1] tokens=1343 tool_calls=3 content=''
+2026-09-28 19:24:09,728 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet", "func_name": "non_form_errors"}
+2026-09-28 19:24:09,728 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet', 'func_name': 'non_form_errors'}
+2026-09-28 19:24:12,116 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/forms/formsets.py","class_name":"BaseFormSet"}
+2026-09-28 19:24:12,117 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:15,659 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:24:15,660 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:24:17,849 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet', 'func_name': 'non_form_errors'}: True
+2026-09-28 19:24:17,850 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+You provide a wrong file name or class name or function name. Please try another file name again. It may be a file function.
+2026-09-28 19:24:17,850 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet", "func_name": "full_clean"}
+2026-09-28 19:24:17,850 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet', 'func_name': 'full_clean'}
+2026-09-28 19:24:20,510 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name":"django/forms/formsets.py","class_name":"BaseFormSet"}
+2026-09-28 19:24:20,510 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:22,350 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:24:22,351 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:24:24,718 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'BaseFormSet', 'func_name': 'full_clean'}: ```False```
+2026-09-28 19:24:24,719 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:24:24,719 - INFO - [round 1] [tool-call] get_code_of_class_function args={"file_name": "django/forms/utils.py", "class_name": "ErrorList", "func_name": "__init__"}
+2026-09-28 19:24:24,719 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'ErrorList', 'func_name': '__init__'}
+2026-09-28 19:24:28,165 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:24:28,166 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:28,166 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:24:28,166 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:28,166 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:24:28,166 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:30,673 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:24:30,674 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:24:33,005 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'ErrorList', 'func_name': '__init__'}: False
+2026-09-28 19:24:33,006 - INFO - [round 1] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:24:35,917 - INFO - [round 2] tokens=1537 tool_calls=3 content=''
+2026-09-28 19:24:35,918 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "django/forms/formsets.py", "func_name": "non_form_errors"}
+2026-09-28 19:24:35,918 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/forms/formsets.py', 'func_name': 'non_form_errors'}
+2026-09-28 19:24:39,196 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:24:39,197 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:39,197 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:24:39,197 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:39,197 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:24:39,197 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:42,075 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:24:42,075 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:24:44,396 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/forms/formsets.py', 'func_name': 'non_form_errors'}: False
+2026-09-28 19:24:44,397 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:24:44,397 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "django/forms/formsets.py", "func_name": "formset_factory"}
+2026-09-28 19:24:44,397 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/forms/formsets.py', 'func_name': 'formset_factory'}
+2026-09-28 19:24:47,710 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-call] get_code_of_file_function args={"file_name": "django/forms/formsets.py", "func_name": "formset_factory"}
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-result] get_code_of_file_function ->
+You provide a wrong file name or function name. Please try another file name again. It may be a class function.
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:24:47,711 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:24:52,190 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:24:52,191 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:24:56,509 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/forms/formsets.py', 'func_name': 'formset_factory'}: False
+2026-09-28 19:24:56,510 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:24:56,510 - INFO - [round 2] [tool-call] get_code_of_file_function args={"file_name": "django/forms/forms.py", "func_name": "pretty_name"}
+2026-09-28 19:24:56,510 - INFO -   [prune] start for get_code_of_file_function args={'file_name': 'django/forms/forms.py', 'func_name': 'pretty_name'}
+2026-09-28 19:25:01,032 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:25:01,033 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:01,033 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:25:01,033 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:03,430 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:25:03,431 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:25:05,913 - INFO -   [prune] decision for get_code_of_file_function args={'file_name': 'django/forms/forms.py', 'func_name': 'pretty_name'}: False
+2026-09-28 19:25:05,914 - INFO - [round 2] [tool-result] get_code_of_file_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:25:08,951 - INFO - [round 3] tokens=1743 tool_calls=3 content=''
+2026-09-28 19:25:08,952 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/forms/formsets.py", "class_name": "ManagementForm", "func_name": "clean"}
+2026-09-28 19:25:08,952 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'ManagementForm', 'func_name': 'clean'}
+2026-09-28 19:25:12,035 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:25:12,036 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:12,036 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:25:12,036 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:12,036 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:25:12,036 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:14,802 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:25:14,803 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:25:17,357 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/formsets.py', 'class_name': 'ManagementForm', 'func_name': 'clean'}: False
+2026-09-28 19:25:17,358 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:25:17,358 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/forms/utils.py", "class_name": "RenderableErrorMixin", "func_name": "as_ul"}
+2026-09-28 19:25:17,358 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'RenderableErrorMixin', 'func_name': 'as_ul'}
+2026-09-28 19:25:19,960 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "RenderableErrorMixin"}
+2026-09-28 19:25:19,961 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:19,961 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:25:19,961 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:19,961 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:25:19,961 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:21,888 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:25:21,889 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:25:24,251 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'RenderableErrorMixin', 'func_name': 'as_ul'}: False
+2026-09-28 19:25:24,252 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:25:24,252 - INFO - [round 3] [tool-call] get_code_of_class_function args={"file_name": "django/forms/utils.py", "class_name": "RenderableErrorMixin", "func_name": "get_context"}
+2026-09-28 19:25:24,252 - INFO -   [prune] start for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'RenderableErrorMixin', 'func_name': 'get_context'}
+2026-09-28 19:25:27,752 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "RenderableErrorMixin"}
+2026-09-28 19:25:27,753 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:27,753 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/utils.py", "class_name": "ErrorList"}
+2026-09-28 19:25:27,753 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:27,753 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:25:27,753 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:30,042 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:25:30,043 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:25:32,568 - INFO -   [prune] decision for get_code_of_class_function args={'file_name': 'django/forms/utils.py', 'class_name': 'RenderableErrorMixin', 'func_name': 'get_context'}: False
+2026-09-28 19:25:32,568 - INFO - [round 3] [tool-result] get_code_of_class_function ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:25:34,834 - INFO - [round 4] tokens=1841 tool_calls=1 content=''
+2026-09-28 19:25:34,835 - INFO - [round 4] [tool-call] exit args={}
+2026-09-28 19:25:34,835 - INFO -   [prune] start for exit args={}
+2026-09-28 19:25:37,513 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/forms.py", "class_name": "BaseForm"}
+2026-09-28 19:25:37,514 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:37,514 - INFO -   [prune 0] [tool-call] get_code_of_class args={"file_name": "django/forms/formsets.py", "class_name": "BaseFormSet"}
+2026-09-28 19:25:37,514 - INFO -   [prune 0] [tool-result] get_code_of_class ->
+You provide a wrong file name or class name. Please try another file name again.
+2026-09-28 19:25:39,838 - INFO -   [prune 1] [tool-call] exit args={}
+2026-09-28 19:25:39,839 - INFO -   [prune 1] [tool-result] exit ->
+Exiting tool calls. Now provide your final answer.
+2026-09-28 19:25:42,510 - INFO -   [prune] decision for exit args={}: False
+2026-09-28 19:25:42,511 - INFO - [round 4] [tool-result] exit ->
+I have already checked this function/class and it is not related to the bug. Don't check the functions it calls.
+2026-09-28 19:25:42,511 - INFO - [round 4] model called exit(), ending tool loop
+2026-09-28 19:25:42,511 - INFO - ==== tool-call loop end ====
+2026-09-28 19:25:46,754 - INFO - <locations>
+  <location>
+    <file>django/forms/formsets.py</file>
+    <type>function</type>
+    <name>BaseFormSet.non_form_errors</name>
+  </location>
+  <location>
+    <file>django/forms/utils.py</file>
+    <type>class</type>
+    <name>ErrorList</name>
+  </location>
+  <location>
+    <file>django/forms/forms.py</file>
+    <type>function</type>
+    <name>BaseForm.non_field_errors</name>
+  </location>
+  <location>
+    <file>django/forms/formsets.py</file>
+    <type>class</type>
+    <name>BaseFormSet</name>
+  </location>
+  <location>
+    <file>docs/topics/forms/formsets.txt</file>
+    <type>function</type>
+    <name>non_form_errors</name>
+  </location>
+</locations>
+2026-09-28 19:25:46,755 - INFO - parsed locations: {'django/forms/formsets.py': ['function: BaseFormSet.non_form_errors\nclass: BaseFormSet'], 'django/forms/utils.py': ['class: ErrorList'], 'django/forms/forms.py': ['function: BaseForm.non_field_errors'], 'docs/topics/forms/formsets.txt': ['function: non_form_errors']}

@@ -1,0 +1,25 @@
+2026-09-28 15:49:26,411 - INFO - Processing bug django__django-12050
+2026-09-28 15:49:26,412 - INFO - ================ localize django__django-12050 ================
+2026-09-28 15:49:29,583 - INFO - prompting with message:
+[{'role': 'system', 'content': '\nYou will be presented with a bug report with repository structure to access the source code of the system under test (SUT).\nYour task is to locate the top-5 most likely culprit files based on the bug report.\n'}, {'role': 'user', 'content': "\n\nThe bug report is as follows:\n```\n### GitHub Problem Description ###\nQuery.resolve_lookup_value coerces value of type list to tuple\nDescription\n\t\nChanges introduced in #30687 cause an input value list to be coerced to tuple breaking exact value queries. This affects ORM field types that are dependent on matching input types such as PickledField.\nThe expected iterable return type should match input iterable type.\n\n\n###\n\n### Candidate Files ###\n\n\n###\n```\n\n\nLet's locate the faulty file step by step using reasoning. \nIn order to locate accurately, you can pre-select 7 files, then check them through function calls, and finally confirm 5 file names.\n\n\nBased on the available information, reconfirm and provide complete name of the top-5 most likely culprit files for the bug. \nSince your answer will be processed automatically, please give your answer in the format as follows.\nThe returned files should be separated by new lines ordered by most to least important and wrapped with ```.\n```\nfile1.py\nfile2.py\nfile3.py\nfile4.py\nfile5.py\n```\nReplace the 'file1.py' with the actual file path.\nFor example, \n```\nsklearn/linear_model/__init__.py\nsklearn/base.py\n```\n\n"}]
+2026-09-28 15:49:29,583 - INFO - ================================================================================
+2026-09-28 15:49:32,690 - INFO - ```
+django/db/models/sql/query.py
+django/db/models/lookups.py
+django/db/models/fields/__init__.py
+django/db/models/expressions.py
+tests/queries/tests.py
+```
+2026-09-28 15:49:35,615 - INFO - ```
+django/db/models/sql/query.py
+django/db/models/lookups.py
+django/db/models/expressions.py
+django/db/models/fields/__init__.py
+tests/queries/tests.py
+```
+2026-09-28 15:49:37,986 - INFO - ```
+django/db/models/sql/query.py
+django/db/models/lookups.py
+django/db/models/expressions.py
+django/db/models/fields/__init__.py
+```
