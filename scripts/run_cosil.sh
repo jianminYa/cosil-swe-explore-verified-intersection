@@ -50,6 +50,11 @@ export EXPLORER_CODES_ROOT="${EXPLORER_CODES_ROOT:-${ROOT_DIR}/third_party}"
 TOP_K="${COSIL_TOP_K:-5}"
 MAX_ITER="${COSIL_MAX_ITER:-10}"
 TRACE_DIR="${COSIL_TRACE_DIR:-results/cosil_traces}"
+OUTPUT_PATH="${COSIL_OUTPUT:-results/predictions/{explorer}/top{k}.jsonl}"
+LIMIT_ARGS=()
+if [[ -n "${COSIL_LIMIT:-}" ]]; then
+  LIMIT_ARGS+=(--limit "${COSIL_LIMIT}")
+fi
 
 exec /home/jql/miniforge3/bin/conda run --no-capture-output -n "${COSIL_CONDA_ENV}" \
   python third_party/SWE-Explore-Bench/eval_runner.py \
@@ -65,5 +70,6 @@ exec /home/jql/miniforge3/bin/conda run --no-capture-output -n "${COSIL_CONDA_EN
   --cosil-region-mode "${COSIL_REGION_MODE:-file}" \
   --cosil-trace-dir "${TRACE_DIR}" \
   --workers "${COSIL_WORKERS:-1}" \
-  --output "results/predictions/{explorer}/top{k}.jsonl" \
+  "${LIMIT_ARGS[@]}" \
+  --output "${OUTPUT_PATH}" \
   --resume

@@ -1,5 +1,10 @@
 # CoSIL 在 SWE-Explore 上的复现实验
 
+> **状态说明（2026-09-29）**：首轮 451 实例运行已完成，但事后发现结构索引
+> 生成阶段存在相对路径问题，首轮指标不作为最终复现结果。详细分析见
+> [`reports/2026-09-29-structure-generation-path-bug.md`](reports/2026-09-29-structure-generation-path-bug.md)。
+> 修复后的重测使用独立输出目录，首轮日志和 trajectory 保留不覆盖。
+
 本仓库保存 CoSIL 在 SWE-Explore 上的完整定位实验结果。实验数据集为
 SWE-bench-Verified 与 SWE-Explore 的交集，共 451 个实例，覆盖 12 个项目。
 
