@@ -50,7 +50,12 @@ export EXPLORER_CODES_ROOT="${EXPLORER_CODES_ROOT:-${ROOT_DIR}/third_party}"
 TOP_K="${COSIL_TOP_K:-5}"
 MAX_ITER="${COSIL_MAX_ITER:-10}"
 TRACE_DIR="${COSIL_TRACE_DIR:-results/cosil_traces}"
-OUTPUT_PATH="${COSIL_OUTPUT:-results/predictions/{explorer}/top{k}.jsonl}"
+STRUCTURE_CACHE_DIR="${COSIL_STRUCTURE_CACHE_DIR:-results/intermediates/repo_structures}"
+export COSIL_STRUCTURE_CACHE_DIR="${STRUCTURE_CACHE_DIR}"
+OUTPUT_PATH="${COSIL_OUTPUT:-}"
+if [[ -z "${OUTPUT_PATH}" ]]; then
+  OUTPUT_PATH='results/predictions/{explorer}/top{k}.jsonl'
+fi
 LIMIT_ARGS=()
 if [[ -n "${COSIL_LIMIT:-}" ]]; then
   LIMIT_ARGS+=(--limit "${COSIL_LIMIT}")

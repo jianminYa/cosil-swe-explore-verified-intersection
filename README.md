@@ -100,6 +100,7 @@ data/processed/                451 条交集数据、问题映射和仓库清单
 results/predictions/           规范化的逐实例预测与指标
 results/metrics/               汇总指标（JSON/CSV）
 results/cosil_traces/          451 个实例的完整 CoSIL 轨迹与调用记录
+results/intermediates/         AST/repository structure 等生成的中间文件
 logs/                          所有运行阶段日志，包括重试和最终主运行日志
 scripts/                       数据准备、运行和指标汇总脚本
 requirements-repro.txt         Python 依赖列表

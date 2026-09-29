@@ -122,7 +122,8 @@ third_party/CoSIL/repos/astropy__astropy-12907
 3. 生成后检查 repository snapshot 存在且 structure 非空；
 4. 已存在但为空的结构缓存不再被直接复用；
 5. 重测使用独立的 prediction、trace 和日志目录，首轮产物不覆盖；
-6. 先运行少量实例做 smoke test，再启动完整 451 实例重测。
+6. 生成的 AST/repository structure JSON 和其他中间文件单独保存，不在运行后删除；
+7. 先运行少量实例做 smoke test，再启动完整 451 实例重测。
 
 ## 首轮结果的处理
 
